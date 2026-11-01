@@ -1,0 +1,37 @@
+{
+  "provenance": "modelled scalar algorithm accesses; NOT captured hardware accesses",
+  "config": {
+    "m": 16,
+    "k": 16,
+    "n": 32,
+    "element_size": 4,
+    "alignment": 4096
+  },
+  "loop_order": "ikj",
+  "storage": "row-major",
+  "regions": {
+    "A": {
+      "base": 4096,
+      "size_bytes": 1024
+    },
+    "B": {
+      "base": 8192,
+      "size_bytes": 2048
+    },
+    "C": {
+      "base": 12288,
+      "size_bytes": 2048
+    }
+  },
+  "access_count": 33280,
+  "expected_access_count": 33280,
+  "reference_check_passed": true,
+  "result_checksum": 14,
+  "assumptions": [
+    "Deterministic small integer inputs; four-byte modelled elements.",
+    "Input construction is excluded; C initialisation is logged separately.",
+    "Each compute step logs A read, B read, C read, C write in that order.",
+    "No register reuse, vectorisation, threading, compiler or hardware effects.",
+    "Sequence is logical access order, not a timestamp; addresses are assigned model addresses."
+  ]
+}

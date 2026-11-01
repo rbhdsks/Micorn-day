@@ -47,3 +47,39 @@ No cache hit rate, prefetch accuracy, or speedup is estimated here. Those requir
 4. Compare line sizes and distinguish within-line locality from line-to-line strides.
 5. Explain observed patterns and exceptions with counts and suitable plots.
 6. Recommend candidate predictors; defer performance claims until baseline modelling.
+
+## Matrix-multiplication notebook (start here)
+
+Open `level1/matmul_analysis.ipynb` in VS Code with the Jupyter extension, or use JupyterLab. A successfully executed copy with graphs and measured outputs is included.
+
+For an isolated local environment, run from the project root:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r level1/requirements.txt
+python -m jupyterlab level1/matmul_analysis.ipynb
+```
+
+Select the environment's Python kernel and choose **Run All**. No model weights, external dataset, or GPU is required. Change `CONFIG` and `LINE_SIZE` near the top to explore other dimensions. Rerunning overwrites `level1/results/modelled_matmul/`, so copy results elsewhere if you want to preserve an experiment.
+
+The notebook:
+
+1. Generates deterministic matrices and executes two scalar loop orders (`ijk`, `ikj`).
+2. Records logical A/B/C accesses and checks numerical results against a dot-product reference.
+3. Analyses the combined trace and compute-read streams separately.
+4. Plots per-operand access patterns, B-address strides, and cache-line reuse gaps.
+5. Compares grouping at 32-, 64-, and 128-byte line sizes.
+6. Saves raw CSVs, metadata, numerical results, summaries, figures, and `analysis.md`.
+
+### Generate without Jupyter
+
+```sh
+python3 level1/generate_matmul_trace.py --m 16 --k 16 --n 32 --order ijk --output level1/results/modelled_matmul/ijk
+python3 level1/generate_matmul_trace.py --m 16 --k 16 --n 32 --order ikj --output level1/results/modelled_matmul/ikj
+python3 level1/analyze_trace.py level1/results/modelled_matmul/ijk/trace.csv --format csv --output level1/results/modelled_matmul/ijk
+```
+
+These are **modelled algorithm-access traces**, not captured machine instructions. Arrays are row-major four-byte integer elements in separate assigned address regions. Each multiply-accumulate explicitly logs A-read, B-read, C-read, C-write; no register reuse or A-load hoisting is assumed. C initialisation is a separate logged phase; constructing A/B is excluded. Both orders use the same policy and operation counts. `sequence` is not cycles. The Python objects' actual addresses and execution overhead are not traced.
+
+The CSV includes `phase`, `operation`, `operand`, access size, and loop indices for notebook filtering. The generic CLI still analyses only `address` and does not distinguish reads/writes. No request crosses a 64-byte line in this model because elements are four-byte aligned. No performance or real-AI-workload claim follows from these traces alone. Official acceptance remains to be confirmed.

@@ -17,3 +17,7 @@ Pending real trace. Include working set, line deltas, reuse, phase/window compar
 ## Design implications
 
 Pending evidence: compare sequential, fixed-stride, and irregular regions; choose candidates for software-model evaluation. Do not select the final predictor solely from synthetic tests.
+
+## Available preliminary experiment
+
+A modelled matrix-multiplication experiment is now available in `matmul_analysis.ipynb`, with measured conclusions in `results/modelled_matmul/analysis.md`. This is a separate, clearly labelled starting example; it does not replace the pending official/captured workload analysis above.

@@ -1,0 +1,4 @@
+# Notebook and plotting only; CLI generator/analyser use the standard library.
+jupyterlab>=4,<5
+ipykernel>=6,<8
+matplotlib>=3.7,<4

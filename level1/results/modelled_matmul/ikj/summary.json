@@ -1,0 +1,195 @@
+{
+  "accesses": 33280,
+  "line_size_bytes": 64,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 80,
+  "touched_line_footprint_bytes": 5120,
+  "minimum_byte_address": 4096,
+  "maximum_byte_address": 14332,
+  "adjacent_same_line_accesses": 8672,
+  "adjacent_same_line_fraction": 0.26058475314763063,
+  "accesses_to_previously_seen_line": 33200,
+  "mean_reuse_gap_accesses": 47.65397590361446,
+  "top_line_access_counts": [
+    {
+      "line_number": 192,
+      "count": 528
+    },
+    {
+      "line_number": 193,
+      "count": 528
+    },
+    {
+      "line_number": 194,
+      "count": 528
+    },
+    {
+      "line_number": 195,
+      "count": 528
+    },
+    {
+      "line_number": 196,
+      "count": 528
+    },
+    {
+      "line_number": 197,
+      "count": 528
+    },
+    {
+      "line_number": 198,
+      "count": 528
+    },
+    {
+      "line_number": 199,
+      "count": 528
+    },
+    {
+      "line_number": 200,
+      "count": 528
+    },
+    {
+      "line_number": 201,
+      "count": 528
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": 0,
+      "count": 8672
+    },
+    {
+      "delta_lines": 64,
+      "count": 768
+    },
+    {
+      "delta_lines": 66,
+      "count": 736
+    },
+    {
+      "delta_lines": 62,
+      "count": 704
+    },
+    {
+      "delta_lines": 68,
+      "count": 704
+    },
+    {
+      "delta_lines": 70,
+      "count": 672
+    },
+    {
+      "delta_lines": 60,
+      "count": 640
+    },
+    {
+      "delta_lines": 72,
+      "count": 640
+    },
+    {
+      "delta_lines": 74,
+      "count": 608
+    },
+    {
+      "delta_lines": 58,
+      "count": 576
+    }
+  ],
+  "top_nonzero_line_deltas": [
+    {
+      "delta_lines": 64,
+      "count": 768
+    },
+    {
+      "delta_lines": 66,
+      "count": 736
+    },
+    {
+      "delta_lines": 62,
+      "count": 704
+    },
+    {
+      "delta_lines": 68,
+      "count": 704
+    },
+    {
+      "delta_lines": 70,
+      "count": 672
+    },
+    {
+      "delta_lines": 60,
+      "count": 640
+    },
+    {
+      "delta_lines": 72,
+      "count": 640
+    },
+    {
+      "delta_lines": 74,
+      "count": 608
+    },
+    {
+      "delta_lines": 58,
+      "count": 576
+    },
+    {
+      "delta_lines": 76,
+      "count": 576
+    }
+  ],
+  "top_reuse_gaps": [
+    {
+      "gap_accesses": 4,
+      "count": 15856
+    },
+    {
+      "gap_accesses": 1,
+      "count": 8672
+    },
+    {
+      "gap_accesses": 3,
+      "count": 7680
+    },
+    {
+      "gap_accesses": 67,
+      "count": 480
+    },
+    {
+      "gap_accesses": 1988,
+      "count": 480
+    },
+    {
+      "gap_accesses": 499,
+      "count": 1
+    },
+    {
+      "gap_accesses": 547,
+      "count": 1
+    },
+    {
+      "gap_accesses": 2515,
+      "count": 1
+    },
+    {
+      "gap_accesses": 2563,
+      "count": 1
+    },
+    {
+      "gap_accesses": 4531,
+      "count": 1
+    }
+  ],
+  "top_regions": [
+    {
+      "region_number": 3,
+      "count": 16896
+    },
+    {
+      "region_number": 1,
+      "count": 8192
+    },
+    {
+      "region_number": 2,
+      "count": 8192
+    }
+  ]
+}
