@@ -1,0 +1,16 @@
+flowchart LR
+    CPU[CPU / trace requester] -->|request valid + ready| CACHE[1 KiB direct-mapped cache<br/>64 x 16-byte lines]
+    CACHE -->|32-bit word on hit| RSP[Registered response<br/>hold until CPU ready]
+    RSP --> CPU
+    CACHE -->|miss: save byte address| D[One pending demand]
+    CPU -->|accepted line address| P[Selectable predictor<br/>1: signed stride / 2: next-line]
+    P --> C[One candidate slot]
+    D --> ARB[IDLE arbitration<br/>demand before speculation]
+    C --> ARB
+    ARB --> SEND[SEND<br/>hold request until ready]
+    SEND --> WAIT[WAIT<br/>one outstanding line read]
+    SEND -->|aligned 16-byte request| MEM[Simulated backing memory<br/>immutable read contents]
+    MEM -->|128-bit line response| WAIT
+    WAIT -->|fill: ordinary replacement| CACHE
+    WAIT -->|demand completion| RSP
+    WAIT -.->|late demand: IDLE recheck| D

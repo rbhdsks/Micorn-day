@@ -1,0 +1,6 @@
+# Run from Phase1. Generic synthesis only; no device or timing sign-off.
+read_verilog -sv level4/rtl/stride_prefetcher.sv level4/rtl/next_line_prefetcher.sv level4/rtl/ai_cache.sv
+hierarchy -check -top ai_cache
+synth -top ai_cache
+check
+stat

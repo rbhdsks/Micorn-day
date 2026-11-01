@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="870" viewBox="0 0 1420 870" role="img" aria-labelledby="title desc">
+<title id="title">Phase 1 cache and prefetch architecture</title>
+<desc id="desc">A read-only CPU path through a 1 KiB direct-mapped cache. Accepted addresses train a selectable stride or next-line predictor. A pending demand and one candidate feed an IDLE SEND WAIT controller, which permits one outstanding memory line read. Demand and speculative responses fill the same cache in Phase 1.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#243b53"/></marker>
+  <marker id="bluearrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#006f9e"/></marker>
+  <style>
+  text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d} .heading{font-size:24px;font-weight:700}.sub{font-size:17px;fill:#486581}.box{fill:#fff;stroke:#243b53;stroke-width:2}.predict{fill:#e8f5ff;stroke:#006f9e;stroke-width:2}.title{font-size:19px;font-weight:700}.body{font-size:16px}.label{font-size:15px;fill:#486581}.wire{fill:none;stroke:#243b53;stroke-width:2;marker-end:url(#arrow)}.blue{fill:none;stroke:#006f9e;stroke-width:2;marker-end:url(#bluearrow)}
+  </style>
+</defs>
+<rect width="1420" height="870" fill="#f6f8fa"/>
+<text x="40" y="40" class="heading">Phase 1: read-only cache and selectable prefetch baseline</text>
+<text x="40" y="68" class="sub">32-bit aligned reads · 16-byte lines · ready/valid channels · one memory transaction outstanding</text>
+
+<rect x="40" y="130" width="200" height="130" rx="8" class="box"/>
+<text x="65" y="165" class="title">CPU / trace driver</text>
+<text x="65" y="195" class="body">Byte address</text>
+<text x="65" y="220" class="body">Response readiness</text>
+
+<rect x="370" y="115" width="380" height="170" rx="8" class="box"/>
+<text x="395" y="150" class="title">1 KiB direct-mapped cache</text>
+<text x="395" y="180" class="body">64 x (128-bit data + full identity)</text>
+<text x="395" y="206" class="body">Valid and prefetched markers</text>
+<text x="395" y="232" class="body">Index + identity match + word select</text>
+<text x="395" y="258" class="body">Demand and PF share replacement</text>
+
+<rect x="1080" y="130" width="260" height="130" rx="8" class="box"/>
+<text x="1105" y="165" class="title">Registered CPU response</text>
+<text x="1105" y="195" class="body">32-bit selected word</text>
+<text x="1105" y="220" class="body">Hold stable until consumed</text>
+
+<path d="M240 165 H370" class="wire"/>
+<text x="258" y="146" class="label">Request</text>
+<path d="M750 165 H1080" class="wire"/>
+<text x="805" y="145" class="label">Resident hit</text>
+<path d="M1210 130 V95 H140 V130" class="wire"/>
+<text x="825" y="88" class="label">Response valid + ready</text>
+
+<rect x="360" y="370" width="300" height="150" rx="8" class="predict"/>
+<text x="385" y="405" class="title">Selectable predictor</text>
+<text x="385" y="436" class="body">1: signed stride + confidence</text>
+<text x="385" y="462" class="body">2: next-line reference</text>
+<text x="385" y="488" class="body">Observe distinct demand lines</text>
+
+<rect x="730" y="400" width="180" height="90" rx="8" class="predict"/>
+<text x="748" y="435" class="title">One PF candidate</text>
+<text x="748" y="464" class="body">Advisory line ID</text>
+
+<rect x="1000" y="360" width="340" height="190" rx="8" class="box"/>
+<text x="1025" y="395" class="title">Memory request controller</text>
+<text x="1025" y="426" class="body">IDLE: demand before speculation</text>
+<text x="1025" y="452" class="body">SEND: hold address until ready</text>
+<text x="1025" y="478" class="body">WAIT: accept complete line</text>
+<text x="1025" y="518" class="label">A selected prefetch is nonpreemptible</text>
+
+<rect x="360" y="635" width="300" height="110" rx="8" class="box"/>
+<text x="385" y="670" class="title">One pending demand</text>
+<text x="385" y="701" class="body">Save byte address on miss</text>
+<text x="385" y="726" class="body">Recheck after speculative fill</text>
+
+<rect x="1000" y="660" width="340" height="110" rx="8" class="box"/>
+<text x="1025" y="695" class="title">Simulated backing memory</text>
+<text x="1025" y="726" class="body">128-bit immutable line response</text>
+<text x="1025" y="751" class="body">Countdown delay and ready stalls</text>
+
+<path d="M240 220 H280 V445 H360" class="blue"/>
+<text x="70" y="347" class="label">Accepted line address</text>
+<path d="M660 445 H730" class="blue"/>
+<path d="M910 445 H1000" class="blue"/>
+<text x="730" y="366" class="label">Reject cached line</text>
+<text x="730" y="386" class="label">at selection</text>
+<path d="M420 285 V315 H315 V690 H360" class="wire"/>
+<text x="320" y="591" class="label">Miss</text>
+<path d="M660 690 H950 V515 H1000" class="wire"/>
+<text x="680" y="671" class="label">Pending demand first</text>
+<path d="M1200 550 V660" class="wire"/>
+<text x="1216" y="604" class="label">Aligned read</text>
+<path d="M1000 735 H925 V270 H750" class="wire"/>
+<text x="762" y="295" class="label">Line fill</text>
+<path d="M1305 360 V260" class="wire"/>
+<text x="1118" y="318" class="label">Demand refill response</text>
+
+<text x="40" y="815" class="body">Scope: read-only, noncoherent, shared synchronous reset; no writes, errors, address translation or DDR PHY.</text>
+<text x="40" y="843" class="label">Phase 2 may add speculative buffer isolation and usefulness feedback. They are not part of this baseline.</text>
+</svg>
