@@ -74,7 +74,7 @@ module ai_cache_context #(
  assign mem_req_addr={tx_line,4'b0};
  assign mem_rsp_ready=!rst && state==WAIT;
  generate
-  if(REGION_ENABLE) begin:g_region
+  if(REGION_ENABLE != 0) begin:g_region
    region_stride_prefetcher #(.ENTRIES(REGION_ENTRIES),.REGION_LINE_BITS(REGION_LINE_BITS))
     predictor(clk,rst,effective_enable,accept,req_line,candidate_valid,candidate_line);
   end else begin:g_global

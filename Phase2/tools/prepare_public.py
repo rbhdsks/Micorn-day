@@ -71,8 +71,17 @@ jobs:
         with:
           python-version: '3.12'
       - run: sudo apt-get update && sudo apt-get install -y iverilog verilator
+      - run: iverilog -V && verilator --version
       - run: make -C Phase2 test
       - run: make -C Phase2 independent
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-logs
+          path: |
+            Phase2/build/verification/
+            Phase2/build/independent/*.log
+            Phase2/build/independent/summary.json
 ''')
  old=O/'.github/workflows/phase1.yml'
  if old.exists():old.unlink()

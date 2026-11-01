@@ -8,7 +8,10 @@ TEST=R/'Phase2/level4/audit_tests/tb_independent.sv'
 CONFIG={'global_buffer':(0,0,0),'region_buffer':(1,0,0),'context_feedback':(1,1,0),'victim_buffer':(0,0,1)}
 def run(cmd,name,expect=False):
  p=subprocess.run(cmd,cwd=R,text=True,capture_output=True,timeout=240)
- out=p.stdout+p.stderr;(B/(name+'.log')).write_text(out);p.check_returncode()
+ out=p.stdout+p.stderr;(B/(name+'.log')).write_text(out)
+ if p.returncode:
+  print(out,file=sys.stderr,flush=True)
+ p.check_returncode()
  if expect and 'PASS:' not in out:raise RuntimeError(name+' missing PASS')
  return out
 def main():
