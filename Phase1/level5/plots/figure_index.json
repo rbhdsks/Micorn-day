@@ -1,0 +1,47 @@
+[
+  {
+    "file": "01_speedup",
+    "caption": "Completion speedup depends on access pattern; all 13 workloads, identical cache and timing.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "02_hit_rate",
+    "caption": "Demand hit rate is not execution speedup; all 13 workloads, identical cache and timing.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "03_latency",
+    "caption": "Response availability includes late-prefetch benefits; all 13 workloads, identical cache and timing.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "04_traffic",
+    "caption": "Traffic ratio; pollution case shown separately to preserve the scale.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "05_prefetch_fates",
+    "caption": "Stride-prefetch outcomes conserve after natural quiescence.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "06_pollution",
+    "caption": "320 demanded reads, four distinct demanded lines; all data correct despite the slowdown.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "07_workload_footprint",
+    "caption": "Unique touched lines are a footprint measure, not a cache-capacity requirement.",
+    "evidence": "measured RTL"
+  },
+  {
+    "file": "08_cdm_probabilities",
+    "caption": "Supplied illustrative factors; not fitted models and not cache measurements.",
+    "evidence": "recalculated notes illustration"
+  },
+  {
+    "file": "09_cdm_storage",
+    "caption": "Analytic tensor storage excludes optimizer, gradients, data and temporary matrices.",
+    "evidence": "analytic storage"
+  }
+]

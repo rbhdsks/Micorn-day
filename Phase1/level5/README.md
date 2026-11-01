@@ -22,6 +22,20 @@ python3 level5/scripts/run_benchmarks.py --output build/latency128 --latency 128
 python3 level5/scripts/run_benchmarks.py --output build/small_cache --index-bits 4
 ```
 
+## Read the measured result first
+
+Open [the executed results notebook](results_walkthrough.ipynb), [the complete measured report](results/reference/report.md) or [the figure gallery](plots/README.md). The following completion cycles come directly from the retained RTL CSV.
+
+| Workload | No prefetch | Next-line | Stride | Why it matters |
+|---|---:|---:|---:|---|
+| Column stride | 21,098 | 21,098 | 12,573 | Stride recognizes the line pitch |
+| Hot-line pollution | 7,888 | 8,895 | 8,927 | Speculation evicts demanded data |
+| Modelled ijk A/B | 6,940 | 7,154 | 6,940 | Global stride sees no gain |
+| Modelled ikj A/B | 6,404 | 6,443 | 6,404 | Extra hits do not guarantee faster completion |
+
+The [MATLAB source](matlab/README.md) and [Python plot source](scripts/plot_results.py) use the same evidence. CDM figures form a separate research illustration and do not appear as a fourth RTL benchmark policy.
+
+
 ## Files and generated evidence
 
 - `scripts/trace_io.py`: strict aligned-read trace parser and packed `.mem` writer.

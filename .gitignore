@@ -7,3 +7,6 @@ __pycache__/
 Phase1/build/
 *.vvp
 *.vcd
+
+node_modules/
+Phase1/.chart-data-*/

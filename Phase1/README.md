@@ -1,6 +1,6 @@
 # Phase 1: complete baseline
 
-This phase connects the five challenge levels in one reproducible package. It preserves Nitesh's Level 1 work and implements a small, data-checking read-only memory subsystem for policy evaluation.
+This phase connects the five challenge levels in one reproducible package. The current foundation is on main. [Open the presentation](presentation/phase1_presentation.pptx), [technical report](report/phase1_report.pdf) or [figure gallery](level5/plots/README.md). It preserves Nitesh's Level 1 work and implements a small, data-checking read-only memory subsystem for policy evaluation.
 
 ## Run end to end
 
@@ -73,3 +73,23 @@ Demand hit rate is **demand hits / accepted demand accesses**. Speedup is **no-p
 ## Phase 2 boundary
 
 Phase 2 will branch from the completed Phase 1 commit. Its proposed first upgrade is a small separate prefetch buffer, followed by bounded consumption/waste admission feedback. It must be measured against this baseline with the same conditions. See [the roadmap](docs/PHASE2_ROADMAP.md). Phase 2 work has not been implemented on this branch.
+
+## Executed starting notebooks and publication material
+
+- [Level 2 cache model](level2/cache_architecture.ipynb)
+- [Level 3 predictor state](level3/prefetch_walkthrough.ipynb)
+- [Level 4 RTL verification](level4/rtl_walkthrough.ipynb)
+- [Level 5 measured results](level5/results_walkthrough.ipynb)
+- [Separate CDM arithmetic](research/cdm/cdm_walkthrough.ipynb)
+
+`make notebooks` executes these standard-Python cells and retains real outputs. The original Level 1 notebook remains available separately. `make all` now also tests the Level 2 cache model, Level 3 predictor model and CDM arithmetic.
+
+To regenerate scientific plots:
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-figures.txt
+make figures PYTHON=.venv/bin/python
+```
+
+The [MATLAB scripts](level5/matlab/README.md) read the same measurements. MATLAB was unavailable during authoring. The [16-page report](report/README.md) contains native editable equations and the [23-slide PowerPoint](presentation/README.md) contains editable data charts/tables. The low-rank CDM chapter is research, not a new hardware performance claim.

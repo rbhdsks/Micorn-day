@@ -44,3 +44,9 @@ Speedup is baseline completion cycles / policy completion cycles. The end point 
 ## Remaining limits
 
 No Phase 2 speculative buffer or feedback is implemented. No captured real-model trace, formal proof, coverage closure, FPGA bitstream, physical DRAM timing, target timing closure, power measurement or measured AI application speedup is claimed. The immutable A/B bridge and serial request/gap assumptions are explicit in Level 5 provenance. The independent audit's negative cases motivate the separate Phase 2 roadmap.
+
+## Main branch publication expansion
+
+The main-branch foundation now includes 8 cache-model tests, 6 predictor-model tests and 4 CDM arithmetic tests in addition to the original 20 Python checks, for **38 passing Python tests**. The existing 39 RTL benchmarks reproduce the retained measurements.
+
+Five new portable walkthrough notebooks were executed with actual outputs. Nine scientific figure families are provided in PNG/PDF/SVG, alongside MATLAB plotting source. The report has 16 visually inspected pages, and the presentation has 23 slides with seven native editable charts and editable tables. The proposed CDM cache connection remains separate research. MATLAB scripts were not executed because MATLAB was unavailable.

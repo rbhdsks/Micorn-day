@@ -231,6 +231,7 @@
     "level4/tb/tb_trace.sv": "51c732134da1040332ffeab799e7c0d8d2574cab1ea361e5fac12dff42ea9681",
     "level5/scripts/generate_traces.py": "0939dc607b37b4605428c0a151dfa06526903aa37471de27d0d929c80beecb9d",
     "level5/scripts/metrics.py": "dd753bf342f8046266e39fa0748ee4df9b85335729b2a211f10074356c49b719",
+    "level5/scripts/plot_results.py": "f12392e49985cc7c728a3c5f09903d0f19f28b72ae3ce9dc52b2ed2be32358ee",
     "level5/scripts/run_benchmarks.py": "7966363d88c53db6e20a1fe00a1f44708cef0f5c73105f86dea9f5051bea4db6",
     "level5/scripts/trace_io.py": "f4bc9184f48e0035f533e1e12dfc7d83cf2b3833c4942eb166a7d46e09fa585b",
     "level1/analyze_trace.py": "2770c1325b522aad10a8fac62515765d99da25b48a836b8d19246c16b9c9d033",

@@ -4,6 +4,24 @@ This is the read-only Phase 1 subsystem: a 1 KiB direct-mapped cache, one queued
 
 Run all commands from `Phase1/`. The root Makefile builds the test programs into `build/verification/`; generated binaries, logs, waveforms and working results belong under `build/`.
 
+## Start here
+
+Open [the executed RTL walkthrough](rtl_walkthrough.ipynb). It reads the actual controller and runs the real verification commands. This folder contains the implementation, not placeholders.
+
+```sh
+# From the repository root
+make rtl-test
+```
+
+A CPU hit registers one selected word. A miss saves one demand address. The controller moves through IDLE, SEND and WAIT, holds memory requests through backpressure and rechecks queued demands after speculative fills. [The architecture diagram](../level2/cache_architecture.svg) shows the data path.
+
+| State | What happens | What ends the state |
+|---|---|---|
+| IDLE | Resolve queued demand or select an uncached prediction | A selected transaction |
+| SEND | Hold aligned memory request and payload | Request valid and ready |
+| WAIT | Receive one line and fill cache | Response valid and ready |
+
+
 ## Source map
 
 | File | Responsibility |

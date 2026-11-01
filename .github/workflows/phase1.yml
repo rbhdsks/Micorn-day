@@ -1,7 +1,7 @@
 name: Phase 1 verification
 on:
   push:
-    branches: [phase-1]
+    branches: [main, phase-1]
   pull_request:
     paths:
       - 'Phase1/**'

@@ -1,0 +1,41 @@
+[
+  {
+    "rank": 1,
+    "chosen_probabilities": [
+      0.4950001666600003,
+      0.4950001666600003,
+      0.5049998333399998,
+      0.497500020833125,
+      0.5074994375506203,
+      0.35352116283682394
+    ],
+    "mean_nll": 0.7509704708140682,
+    "interpretation": "illustrative initial factors from supplied Notes, not fitted models or cache results"
+  },
+  {
+    "rank": 2,
+    "chosen_probabilities": [
+      0.48750260351578967,
+      0.48750260351578967,
+      0.5124973964842103,
+      0.5024999791668749,
+      0.5199893401555818,
+      0.36512295746308254
+    ],
+    "mean_nll": 0.7425011173718277,
+    "interpretation": "illustrative initial factors from supplied Notes, not fitted models or cache results"
+  },
+  {
+    "rank": 3,
+    "chosen_probabilities": [
+      0.51499550161941,
+      0.51499550161941,
+      0.4850044983805899,
+      0.49250056244937956,
+      0.5049998333399998,
+      0.33975265552070244
+    ],
+    "mean_nll": 0.7536309341959657,
+    "interpretation": "illustrative initial factors from supplied Notes, not fitted models or cache results"
+  }
+]

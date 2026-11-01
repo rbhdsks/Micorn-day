@@ -12,7 +12,7 @@ The initial repository plan is retained at [initial_plan.md](initial_plan.md) as
 
 The user's current build request, pasted design-thinking explanation and supplied screenshots define this phase's requested deliverables. Level 2 requires an architecture/specification and rationale; Level 3 requires algorithm/state/pseudocode plus help/failure cases and scheduling decisions; Level 5 requires precise demand hit rate and completion-cycle speedup.
 
-Original organizer slides and official acceptance rules are not independently verified here. No official scores or winning probabilities are asserted. An unrelated academic PDF and private chat screenshots are not copied into the Git repository.
+Original organizer slides and official acceptance rules are not independently verified here. No official scores or winning probabilities are asserted. The supplied academic PDF informs the separate CDM research chapter; that private source PDF and the chat screenshots are not copied into the Git repository.
 
 ## Trace classes
 
@@ -28,4 +28,4 @@ The Level 5 run records source hashes, input hashes, filter/count provenance, ge
 
 ## Authorship and assistance
 
-The inherited history records AI assistance in Level 1. Phase 1 integration, RTL comparison logic, tests and documentation also used AI assistance. Team members should review and understand the design, keep their own experiment/change records and follow the organizer's disclosure rules. No independent authorship or algorithmic novelty certification is claimed.
+The inherited history records AI assistance in Level 1. Phase 1 integration, RTL comparison logic, tests, research arithmetic, figures, report and presentation also used AI assistance. Team members should review and understand the design, keep their own experiment/change records and follow the organizer's disclosure rules. No independent authorship or algorithmic novelty certification is claimed.

@@ -13,7 +13,7 @@ COMPILED := $(addprefix build/verification/,$(addsuffix .vvp,$(BENCHES)))
 all: test benchmark
 check: all
 
-test: level1-test tooling-test rtl-test
+test: level1-test level2-test level3-test research-test tooling-test rtl-test
 level1-test:
 	PYTHONPATH=level1 $(PYTHON) -m unittest discover -s level1/tests -v
 tooling-test:
@@ -48,3 +48,16 @@ help:
 	@echo 'make synth        Generic synthesis/check (YOSYS may override executable)'
 	@echo 'make reference    Export compact verified benchmark evidence for Git'
 	@echo 'make clean        Remove only generated Phase1/build outputs'
+
+.PHONY: level2-test level3-test research-test notebooks figures
+level2-test:
+	PYTHONPATH=level2 $(PYTHON) -m unittest discover -s level2/tests -v
+level3-test:
+	PYTHONPATH=level3 $(PYTHON) -m unittest discover -s level3/tests -v
+research-test:
+	PYTHONPATH=research/cdm $(PYTHON) -m unittest discover -s research/cdm/tests -v
+notebooks:
+	$(PYTHON) tools/execute_notebooks.py
+figures:
+	$(PYTHON) research/cdm/cdm_reference.py
+	$(PYTHON) level5/scripts/plot_results.py
