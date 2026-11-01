@@ -1,0 +1,11 @@
+# SYNTHETIC TOOLING EXAMPLE — not a supplied AI workload.
+# Decimal or 0x-prefixed hexadecimal byte addresses; one per line.
+0x1000
+0x1004
+0x1040
+0x1080
+0x10c0
+0x1000
+0x1040
+0x1080
+0x10c0

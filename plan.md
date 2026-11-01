@@ -131,7 +131,7 @@ Submission location, exact file types, naming, and deadline remain unknown.
 
 - [x] Save the explanation and working plan.
 - [x] Inspect initial folder: no trace or official brief present.
-- [ ] Level 1: implement and verify initial trace-analysis tooling.
+- [x] Level 1: implement and verify initial trace-analysis tooling (five tests passed; synthetic example analysed).
 - [ ] Level 1: obtain and validate actual workload trace and format.
 - [ ] Level 1: analyse actual workload and write evidence-based conclusions.
 - [ ] Level 2: implement baseline cache software model; specify architecture.
