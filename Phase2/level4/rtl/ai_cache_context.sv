@@ -60,13 +60,13 @@ module ai_cache_context #(
  wire pf_buffered=(buffer_valid[0] && buffer_line[0]==pf_line) ||
                   (buffer_valid[1] && buffer_line[1]==pf_line);
  wire fill_slot=!buffer_valid[0] ? 1'b0 : (!buffer_valid[1] ? 1'b1 : buffer_replace);
- wire effective_enable=prefetch_enable && !VICTIM_ENABLE;
- wire feedback_allow=!FEEDBACK_ENABLE || feedback_quality!=0 || probe_age==LAST_PROBE;
+ wire effective_enable=prefetch_enable && (VICTIM_ENABLE == 0);
+ wire feedback_allow=(FEEDBACK_ENABLE == 0) || feedback_quality!=0 || probe_age==LAST_PROBE;
  wire candidate_valid;
  wire [27:0] candidate_line;
  wire accept=cpu_req_valid && cpu_req_ready;
- wire timely_event=accept && !hit && req_buffer_hit && !VICTIM_ENABLE;
- wire late_event=state==IDLE && demand_pending && !demand_hit && demand_buffer_hit && !VICTIM_ENABLE;
+ wire timely_event=accept && !hit && req_buffer_hit && (VICTIM_ENABLE == 0);
+ wire late_event=state==IDLE && demand_pending && !demand_hit && demand_buffer_hit && (VICTIM_ENABLE == 0);
  wire waste_event=state==WAIT && mem_rsp_valid && tx_prefetch && buffer_valid[fill_slot];
  assign cpu_req_ready=!rst && !demand_pending && (!cpu_rsp_valid || cpu_rsp_ready)
                        && !(state==WAIT && mem_rsp_valid);
@@ -119,12 +119,12 @@ module ai_cache_context #(
      if(req_buffer_hit) begin
       // Only a real demand promotes speculative data into the demand cache.
       data[idx]<=buffer_data[req_slot];tags[idx]<=req_line;valid[idx]<=1;
-      if(VICTIM_ENABLE && valid[idx]) begin
+      if((VICTIM_ENABLE != 0) && valid[idx]) begin
        // Demand-only control: swap the evicted main-cache line into this slot.
        buffer_data[req_slot]<=data[idx];buffer_line[req_slot]<=tags[idx];buffer_valid[req_slot]<=1;
       end else buffer_valid[req_slot]<=0;
       stat_buffer_hit<=stat_buffer_hit+1;
-      if(!VICTIM_ENABLE) stat_pf_useful<=stat_pf_useful+1;
+      if((VICTIM_ENABLE == 0)) stat_pf_useful<=stat_pf_useful+1;
       cpu_rsp_valid<=1;
       cpu_rsp_data<=buffer_data[req_slot][cpu_req_addr[3:2]*32 +:32];
      end else begin demand_pending<=1;demand_addr<=cpu_req_addr[31:2];end
@@ -138,10 +138,10 @@ module ai_cache_context #(
       end else if(demand_buffer_hit) begin
        data[demand_idx]<=buffer_data[demand_slot];tags[demand_idx]<=demand_addr[31:4];valid[demand_idx]<=1;
        cpu_rsp_valid<=1;cpu_rsp_data<=buffer_data[demand_slot][demand_addr[3:2]*32 +:32];
-       if(VICTIM_ENABLE && valid[demand_idx]) begin
+       if((VICTIM_ENABLE != 0) && valid[demand_idx]) begin
         buffer_data[demand_slot]<=data[demand_idx];buffer_line[demand_slot]<=tags[demand_idx];buffer_valid[demand_slot]<=1;
        end else buffer_valid[demand_slot]<=0;
-       demand_pending<=0;if(!VICTIM_ENABLE) stat_pf_late<=stat_pf_late+1;
+       demand_pending<=0;if((VICTIM_ENABLE == 0)) stat_pf_late<=stat_pf_late+1;
       end else begin tx_line<=demand_addr[31:4];tx_prefetch<=0;state<=SEND;end
      end else if(!accept && pf_pending && effective_enable) begin
       pf_pending<=0;
@@ -160,7 +160,7 @@ module ai_cache_context #(
       buffer_data[fill_slot]<=mem_rsp_data;buffer_line[fill_slot]<=tx_line;buffer_valid[fill_slot]<=1;
       buffer_replace<=!fill_slot;
      end else begin
-      if(VICTIM_ENABLE && valid[tx_idx]) begin
+      if((VICTIM_ENABLE != 0) && valid[tx_idx]) begin
        buffer_data[fill_slot]<=data[tx_idx];buffer_line[fill_slot]<=tags[tx_idx];buffer_valid[fill_slot]<=1;
        buffer_replace<=!fill_slot;
       end
