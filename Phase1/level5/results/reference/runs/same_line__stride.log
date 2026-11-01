@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/same_line.mem pf=1 policy=1 checked=16 completion=88 quiescent=90
+level4/tb/tb_trace.sv:127: $finish called at 940000 (1ps)

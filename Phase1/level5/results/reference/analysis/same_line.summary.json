@@ -1,0 +1,38 @@
+{
+  "accesses": 16,
+  "line_size_bytes": 16,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 1,
+  "touched_line_footprint_bytes": 16,
+  "minimum_byte_address": 4096,
+  "maximum_byte_address": 4108,
+  "adjacent_same_line_accesses": 15,
+  "adjacent_same_line_fraction": 1.0,
+  "accesses_to_previously_seen_line": 15,
+  "mean_reuse_gap_accesses": 1.0,
+  "top_line_access_counts": [
+    {
+      "line_number": 256,
+      "count": 16
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": 0,
+      "count": 15
+    }
+  ],
+  "top_nonzero_line_deltas": [],
+  "top_reuse_gaps": [
+    {
+      "gap_accesses": 1,
+      "count": 15
+    }
+  ],
+  "top_regions": [
+    {
+      "region_number": 1,
+      "count": 16
+    }
+  ]
+}

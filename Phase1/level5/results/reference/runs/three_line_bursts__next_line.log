@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/three_line_bursts.mem pf=1 policy=2 checked=192 completion=5739 quiescent=5753
+level4/tb/tb_trace.sv:127: $finish called at 57570000 (1ps)

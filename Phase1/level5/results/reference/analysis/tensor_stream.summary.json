@@ -1,0 +1,83 @@
+{
+  "accesses": 512,
+  "line_size_bytes": 16,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 128,
+  "touched_line_footprint_bytes": 2048,
+  "minimum_byte_address": 4096,
+  "maximum_byte_address": 6140,
+  "adjacent_same_line_accesses": 384,
+  "adjacent_same_line_fraction": 0.7514677103718199,
+  "accesses_to_previously_seen_line": 384,
+  "mean_reuse_gap_accesses": 1.0,
+  "top_line_access_counts": [
+    {
+      "line_number": 256,
+      "count": 4
+    },
+    {
+      "line_number": 257,
+      "count": 4
+    },
+    {
+      "line_number": 258,
+      "count": 4
+    },
+    {
+      "line_number": 259,
+      "count": 4
+    },
+    {
+      "line_number": 260,
+      "count": 4
+    },
+    {
+      "line_number": 261,
+      "count": 4
+    },
+    {
+      "line_number": 262,
+      "count": 4
+    },
+    {
+      "line_number": 263,
+      "count": 4
+    },
+    {
+      "line_number": 264,
+      "count": 4
+    },
+    {
+      "line_number": 265,
+      "count": 4
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": 0,
+      "count": 384
+    },
+    {
+      "delta_lines": 1,
+      "count": 127
+    }
+  ],
+  "top_nonzero_line_deltas": [
+    {
+      "delta_lines": 1,
+      "count": 127
+    }
+  ],
+  "top_reuse_gaps": [
+    {
+      "gap_accesses": 1,
+      "count": 384
+    }
+  ],
+  "top_regions": [
+    {
+      "region_number": 1,
+      "count": 512
+    }
+  ]
+}

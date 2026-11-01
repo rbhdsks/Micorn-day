@@ -131,7 +131,7 @@ Submission location, exact file types, naming, and deadline remain unknown.
 
 - [x] Save the explanation and working plan.
 - [x] Inspect initial folder: no trace or official brief present.
-- [ ] Level 1: implement and verify initial trace-analysis tooling.
+- [x] Level 1: implement and verify initial trace-analysis tooling (five tests passed; synthetic example analysed).
 - [ ] Level 1: obtain and validate actual workload trace and format.
 - [ ] Level 1: analyse actual workload and write evidence-based conclusions.
 - [ ] Level 2: implement baseline cache software model; specify architecture.
@@ -140,3 +140,7 @@ Submission location, exact file types, naming, and deadline remain unknown.
 - [ ] Level 5: evaluate and prepare submission package.
 
 Git initialisation and branches are being handled by the user. Do not initialise Git or change branches as part of this setup.
+
+## Modelled matrix-multiplication starting experiment
+
+User authorised a locally generated matrix-multiplication example and an analysis notebook. `level1/generate_matmul_trace.py` generates explicit algorithm-level A/B/C accesses for `ijk` and `ikj`, and checks numeric outputs. `level1/matmul_analysis.ipynb` generates traces, plots access patterns and reuse, and writes evidence and limitations under `level1/results/modelled_matmul/`. These are modelled accesses, not captured CPU/GPU accesses. This starts Level 1 exploration; actual workload validation and official trace acceptance remain open.

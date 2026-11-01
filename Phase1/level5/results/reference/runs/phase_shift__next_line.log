@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/phase_shift.mem pf=1 policy=2 checked=512 completion=16828 quiescent=16844
+level4/tb/tb_trace.sv:127: $finish called at 168480000 (1ps)

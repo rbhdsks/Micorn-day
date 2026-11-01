@@ -1,0 +1,118 @@
+{
+  "accesses": 192,
+  "line_size_bytes": 16,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 192,
+  "touched_line_footprint_bytes": 3072,
+  "minimum_byte_address": 65536,
+  "maximum_byte_address": 323616,
+  "adjacent_same_line_accesses": 0,
+  "adjacent_same_line_fraction": 0.0,
+  "accesses_to_previously_seen_line": 0,
+  "mean_reuse_gap_accesses": null,
+  "top_line_access_counts": [
+    {
+      "line_number": 4096,
+      "count": 1
+    },
+    {
+      "line_number": 4097,
+      "count": 1
+    },
+    {
+      "line_number": 4098,
+      "count": 1
+    },
+    {
+      "line_number": 4352,
+      "count": 1
+    },
+    {
+      "line_number": 4353,
+      "count": 1
+    },
+    {
+      "line_number": 4354,
+      "count": 1
+    },
+    {
+      "line_number": 4608,
+      "count": 1
+    },
+    {
+      "line_number": 4609,
+      "count": 1
+    },
+    {
+      "line_number": 4610,
+      "count": 1
+    },
+    {
+      "line_number": 4864,
+      "count": 1
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": 1,
+      "count": 128
+    },
+    {
+      "delta_lines": 254,
+      "count": 63
+    }
+  ],
+  "top_nonzero_line_deltas": [
+    {
+      "delta_lines": 1,
+      "count": 128
+    },
+    {
+      "delta_lines": 254,
+      "count": 63
+    }
+  ],
+  "top_reuse_gaps": [],
+  "top_regions": [
+    {
+      "region_number": 16,
+      "count": 3
+    },
+    {
+      "region_number": 17,
+      "count": 3
+    },
+    {
+      "region_number": 18,
+      "count": 3
+    },
+    {
+      "region_number": 19,
+      "count": 3
+    },
+    {
+      "region_number": 20,
+      "count": 3
+    },
+    {
+      "region_number": 21,
+      "count": 3
+    },
+    {
+      "region_number": 22,
+      "count": 3
+    },
+    {
+      "region_number": 23,
+      "count": 3
+    },
+    {
+      "region_number": 24,
+      "count": 3
+    },
+    {
+      "region_number": 25,
+      "count": 3
+    }
+  ]
+}

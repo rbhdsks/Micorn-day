@@ -1,0 +1,26 @@
+{
+  "measurement": "generic synthesis only, no target device/area/timing sign-off",
+  "runs": [
+    {
+      "policy": "stride",
+      "script": "level4/synth/synth.ys",
+      "tool": "Yosys 0.70 via YoWASP",
+      "generic_cells": 33245,
+      "check_problems": 0,
+      "excerpt": "stride.txt"
+    },
+    {
+      "policy": "next_line",
+      "script": "level4/synth/next_line.ys",
+      "tool": "Yosys 0.70 via YoWASP",
+      "generic_cells": 32877,
+      "check_problems": 0,
+      "excerpt": "next_line.txt"
+    }
+  ],
+  "rtl_sha256": {
+    "ai_cache.sv": "7f507e6ab760a39bf9977d514656c1faedef48258954b6946312fc322802764c",
+    "next_line_prefetcher.sv": "7371ff5a38c5c22a8fd4374599959dda68412948a520c2696c7941858884645a",
+    "stride_prefetcher.sv": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe"
+  }
+}

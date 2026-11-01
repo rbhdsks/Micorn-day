@@ -1,0 +1,47 @@
+{
+  "source": "user-supplied ai_cache_project; independent pre-build audit",
+  "files": [
+    {
+      "baseline_path": "rtl/ai_cache.sv",
+      "baseline_sha256": "d2283d9eae4f21c0705b3c5290529b0642dec6ab2aae05b140fdafec2862cc98",
+      "phase1_path": "level4/rtl/ai_cache.sv",
+      "phase1_sha256": "7f507e6ab760a39bf9977d514656c1faedef48258954b6946312fc322802764c"
+    },
+    {
+      "baseline_path": "rtl/stride_prefetcher.sv",
+      "baseline_sha256": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe",
+      "phase1_path": "level4/rtl/stride_prefetcher.sv",
+      "phase1_sha256": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe"
+    },
+    {
+      "baseline_path": "tb/dram_model.sv",
+      "baseline_sha256": "0a5e5cd4b79496ce682b832949299ba85482c93dc2f28fe0f5f895b89f6ad0d0",
+      "phase1_path": "level4/tb/dram_model.sv",
+      "phase1_sha256": "0a5e5cd4b79496ce682b832949299ba85482c93dc2f28fe0f5f895b89f6ad0d0"
+    },
+    {
+      "baseline_path": "tb/tb_cache.sv",
+      "baseline_sha256": "99eaf90ff20d70756162da7f72d35319847b6d81dced7ecb4ae7d894d229666f",
+      "phase1_path": "level4/tb/tb_cache.sv",
+      "phase1_sha256": "a107248ccbe0545289c0b2d6e0d5a49ff789a60ab207d474d9618b1801bc75e1"
+    },
+    {
+      "baseline_path": "tb/tb_stress.sv",
+      "baseline_sha256": "ac39a8df5fba96693567daa67a627bcb68f29c926e138d8cb756029afd9dae12",
+      "phase1_path": "level4/tb/tb_stress.sv",
+      "phase1_sha256": "ac39a8df5fba96693567daa67a627bcb68f29c926e138d8cb756029afd9dae12"
+    },
+    {
+      "baseline_path": "tb/tb_predictor.sv",
+      "baseline_sha256": "df8146b235ffd826688cd06983b09129fc9a139d81c73102d02f5bd447159f18",
+      "phase1_path": "level4/tb/tb_predictor.sv",
+      "phase1_sha256": "df8146b235ffd826688cd06983b09129fc9a139d81c73102d02f5bd447159f18"
+    },
+    {
+      "baseline_path": "tb/tb_trace.sv",
+      "baseline_sha256": "bfcd08c068f66af45bde42fd3742ccbd9c166b9329c22700e4990a358abb9ba3",
+      "phase1_path": "level4/tb/tb_trace.sv",
+      "phase1_sha256": "51c732134da1040332ffeab799e7c0d8d2574cab1ea361e5fac12dff42ea9681"
+    }
+  ]
+}

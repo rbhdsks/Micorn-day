@@ -1,0 +1,73 @@
+{
+  "accesses": 9,
+  "line_size_bytes": 64,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 4,
+  "touched_line_footprint_bytes": 256,
+  "minimum_byte_address": 4096,
+  "maximum_byte_address": 4288,
+  "adjacent_same_line_accesses": 1,
+  "adjacent_same_line_fraction": 0.125,
+  "accesses_to_previously_seen_line": 5,
+  "mean_reuse_gap_accesses": 3.4,
+  "top_line_access_counts": [
+    {
+      "line_number": 64,
+      "count": 3
+    },
+    {
+      "line_number": 65,
+      "count": 2
+    },
+    {
+      "line_number": 66,
+      "count": 2
+    },
+    {
+      "line_number": 67,
+      "count": 2
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": 1,
+      "count": 6
+    },
+    {
+      "delta_lines": 0,
+      "count": 1
+    },
+    {
+      "delta_lines": -3,
+      "count": 1
+    }
+  ],
+  "top_nonzero_line_deltas": [
+    {
+      "delta_lines": 1,
+      "count": 6
+    },
+    {
+      "delta_lines": -3,
+      "count": 1
+    }
+  ],
+  "top_reuse_gaps": [
+    {
+      "gap_accesses": 4,
+      "count": 4
+    },
+    {
+      "gap_accesses": 1,
+      "count": 1
+    }
+  ],
+  "top_regions": [
+    {
+      "region_number": 1,
+      "count": 9
+    }
+  ],
+  "source_path": "level1/examples/synthetic_sequential.txt",
+  "trace_format": "text"
+}

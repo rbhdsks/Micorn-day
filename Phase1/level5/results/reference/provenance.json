@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "measurement_kind": "self-checking RTL simulation, not physical DRAM or application execution",
+  "level1_upstream": {
+    "repository": "https://github.com/rbhdsks/Micorn-day",
+    "branch": "nitesh/feat-level1",
+    "commit": "e0ab37c30e7a02dd1f3d868aef956ee88104a8b0"
+  },
+  "tool_versions": {
+    "iverilog": "Icarus Verilog version 13.0 (stable) (v13_0)",
+    "vvp": "Icarus Verilog runtime version 13.0 (stable) (v13_0)",
+    "python": "3.14.4"
+  },
+  "parameters": {
+    "INDEX_BITS": 6,
+    "LINE_BYTES": 16,
+    "LATENCY": 12,
+    "policies": [
+      "none",
+      "next_line",
+      "stride"
+    ],
+    "response_stall_cycles": "request_index % 4",
+    "driver": "serialized reads with post-response compute gaps",
+    "primary_cycles": "completion_cycles to final consumed demand response; final unused gap excluded",
+    "drain": "bounded natural quiescence; separate quiescent_cycles"
+  },
+  "traces": [
+    {
+      "name": "zero_gap_stream",
+      "file": "zero_gap_stream.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "b20bd69c09ddd33f9fd77f5d29c0024b953563ed726c3672c138f60b76e50b09",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/zero_gap_stream.csv",
+      "replay": "build/benchmarks/replay/zero_gap_stream.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "tensor_stream",
+      "file": "tensor_stream.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "969dc1fedeb5bf2a4ecdd8f7749e343032431cca1645a7c13d81f70a6e673a92",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/tensor_stream.csv",
+      "replay": "build/benchmarks/replay/tensor_stream.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "column_stride",
+      "file": "column_stride.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "efab6600ad5181c77542b961d9e6257e7c5cc1e2f28bef7decba94359490f692",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/column_stride.csv",
+      "replay": "build/benchmarks/replay/column_stride.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "tiled_reuse",
+      "file": "tiled_reuse.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "f65080041786f7d6cdd39c33601e35851576e81d287791b7774b0c34ca8da6df",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/tiled_reuse.csv",
+      "replay": "build/benchmarks/replay/tiled_reuse.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "embedding_gather",
+      "file": "embedding_gather.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "6549619cd492d26d0224067aaed395cb77791bd67bc5e089c49a68818e82cb82",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": 20261101,
+      "input": "build/benchmarks/traces/embedding_gather.csv",
+      "replay": "build/benchmarks/replay/embedding_gather.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "interleaved_conflicting",
+      "file": "interleaved_conflicting.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "36b3a1ba3b74d68ea74cecc384e68e19b3102c1ce62258faab49fc6edfed40ae",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/interleaved_conflicting.csv",
+      "replay": "build/benchmarks/replay/interleaved_conflicting.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "phase_shift",
+      "file": "phase_shift.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "dd582ec01fee5480dce9e0aaaf9511a692ada726d6185dd87defe418e7a96887",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/phase_shift.csv",
+      "replay": "build/benchmarks/replay/phase_shift.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "pollution_return",
+      "file": "pollution_return.csv",
+      "kind": "synthetic_pattern",
+      "rows": 320,
+      "sha256": "ceed5a3910875b52d8eb7a4d027608f04056edccb0976db0aa330b61b899b742",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/pollution_return.csv",
+      "replay": "build/benchmarks/replay/pollution_return.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "three_line_bursts",
+      "file": "three_line_bursts.csv",
+      "kind": "synthetic_pattern",
+      "rows": 192,
+      "sha256": "63355ac6c64c285c8531a968e2519fdda6717161fac99547c03522f4fbdcc2fd",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/three_line_bursts.csv",
+      "replay": "build/benchmarks/replay/three_line_bursts.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "two_stream_disjoint_sets",
+      "file": "two_stream_disjoint_sets.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "cc306cc9a332c7cecc044f25689a80dbdc5ec3295878e8c0d4450c30646e9b1f",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/two_stream_disjoint_sets.csv",
+      "replay": "build/benchmarks/replay/two_stream_disjoint_sets.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "same_line",
+      "file": "same_line.csv",
+      "kind": "synthetic_pattern",
+      "rows": 16,
+      "sha256": "0332b849a7c26d4bcbc9d8834d2011f61a9b6ea8f27c2bdd71af088b4fa0e255",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null,
+      "input": "build/benchmarks/traces/same_line.csv",
+      "replay": "build/benchmarks/replay/same_line.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "modelled_matmul_ijk_ab_reads",
+      "file": "modelled_matmul_ijk_ab_reads.csv",
+      "kind": "filtered_modelled_algorithm",
+      "rows": 512,
+      "sha256": "62bab677604bc0853d636753f622894e9e1c7b262c0194e6fc6551de4cd936ae",
+      "provenance": "Nitesh Level 1 scalar matmul generator; logical A/B compute reads only; not captured machine accesses",
+      "source_generator": "level1/generate_matmul_trace.py",
+      "source_generator_sha256": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+      "source_file": "modelled_sources/ijk/trace.csv",
+      "source_sha256": "6d6f571fda062c255ef0f6e71ddcc87bf6ffc1c44c913e098cb7def543df90f8",
+      "config": {
+        "m": 4,
+        "k": 8,
+        "n": 8,
+        "element_size": 4,
+        "alignment": 4096
+      },
+      "loop_order": "ijk",
+      "excluded_rows": 544,
+      "filter": "phase=compute AND operation=R AND operand in {A,B}; exclude C, writes and initialisation",
+      "gap_cycles": 6,
+      "gap_source": "explicit replay assumption, not measured compute timing",
+      "numerical_generator_reference_passed": true,
+      "rtl_memory_contents": "address-derived deterministic word pattern, not matrix numeric values",
+      "input": "build/benchmarks/traces/modelled_matmul_ijk_ab_reads.csv",
+      "replay": "build/benchmarks/replay/modelled_matmul_ijk_ab_reads.mem",
+      "analysis_line_size_bytes": 16
+    },
+    {
+      "name": "modelled_matmul_ikj_ab_reads",
+      "file": "modelled_matmul_ikj_ab_reads.csv",
+      "kind": "filtered_modelled_algorithm",
+      "rows": 512,
+      "sha256": "63540bee3bb1007d4372641efbf1159f28bc0aa9b7115f0c4b9b2656dee20650",
+      "provenance": "Nitesh Level 1 scalar matmul generator; logical A/B compute reads only; not captured machine accesses",
+      "source_generator": "level1/generate_matmul_trace.py",
+      "source_generator_sha256": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+      "source_file": "modelled_sources/ikj/trace.csv",
+      "source_sha256": "5e413732f9cb8ec519c47366f45971347e68252cb5f6bef08c00b219f73b6001",
+      "config": {
+        "m": 4,
+        "k": 8,
+        "n": 8,
+        "element_size": 4,
+        "alignment": 4096
+      },
+      "loop_order": "ikj",
+      "excluded_rows": 544,
+      "filter": "phase=compute AND operation=R AND operand in {A,B}; exclude C, writes and initialisation",
+      "gap_cycles": 6,
+      "gap_source": "explicit replay assumption, not measured compute timing",
+      "numerical_generator_reference_passed": true,
+      "rtl_memory_contents": "address-derived deterministic word pattern, not matrix numeric values",
+      "input": "build/benchmarks/traces/modelled_matmul_ikj_ab_reads.csv",
+      "replay": "build/benchmarks/replay/modelled_matmul_ikj_ab_reads.mem",
+      "analysis_line_size_bytes": 16
+    }
+  ],
+  "source_sha256": {
+    "level4/rtl/ai_cache.sv": "7f507e6ab760a39bf9977d514656c1faedef48258954b6946312fc322802764c",
+    "level4/rtl/next_line_prefetcher.sv": "7371ff5a38c5c22a8fd4374599959dda68412948a520c2696c7941858884645a",
+    "level4/rtl/stride_prefetcher.sv": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe",
+    "level4/tb/dram_model.sv": "0a5e5cd4b79496ce682b832949299ba85482c93dc2f28fe0f5f895b89f6ad0d0",
+    "level4/tb/tb_adversarial.sv": "e76fd60bb9c3d834af2f1a3a112fa0d1222d7b0adf752aeda648db58fae076a0",
+    "level4/tb/tb_cache.sv": "a107248ccbe0545289c0b2d6e0d5a49ff789a60ab207d474d9618b1801bc75e1",
+    "level4/tb/tb_next_line.sv": "ce86c26e3d6bbad12ecf2d59b5a12289e49ed4b80be36e266a1d42d972516256",
+    "level4/tb/tb_nonpreemptible.sv": "99bb9618c3e9760c80eef25edcde053890efd9515a0f6820ba4a7a28717c85e0",
+    "level4/tb/tb_predictor.sv": "df8146b235ffd826688cd06983b09129fc9a139d81c73102d02f5bd447159f18",
+    "level4/tb/tb_stress.sv": "ac39a8df5fba96693567daa67a627bcb68f29c926e138d8cb756029afd9dae12",
+    "level4/tb/tb_trace.sv": "51c732134da1040332ffeab799e7c0d8d2574cab1ea361e5fac12dff42ea9681",
+    "level5/scripts/generate_traces.py": "0939dc607b37b4605428c0a151dfa06526903aa37471de27d0d929c80beecb9d",
+    "level5/scripts/metrics.py": "dd753bf342f8046266e39fa0748ee4df9b85335729b2a211f10074356c49b719",
+    "level5/scripts/run_benchmarks.py": "7966363d88c53db6e20a1fe00a1f44708cef0f5c73105f86dea9f5051bea4db6",
+    "level5/scripts/trace_io.py": "f4bc9184f48e0035f533e1e12dfc7d83cf2b3833c4942eb166a7d46e09fa585b",
+    "level1/analyze_trace.py": "2770c1325b522aad10a8fac62515765d99da25b48a836b8d19246c16b9c9d033",
+    "level1/generate_matmul_trace.py": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf"
+  },
+  "commands": [
+    {
+      "argv": [
+        "iverilog",
+        "-V"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/iverilog_version.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "-V"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/vvp_version.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "tb_trace",
+        "-Ptb_trace.INDEX_BITS=6",
+        "-Ptb_trace.LATENCY=12",
+        "-Ptb_trace.PREFETCH_POLICY=1",
+        "-o",
+        "build/benchmarks/trace_policy1.vvp",
+        "level4/rtl/ai_cache.sv",
+        "level4/rtl/next_line_prefetcher.sv",
+        "level4/rtl/stride_prefetcher.sv",
+        "level4/tb/dram_model.sv",
+        "level4/tb/tb_trace.sv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/compile_policy1.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "iverilog",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "tb_trace",
+        "-Ptb_trace.INDEX_BITS=6",
+        "-Ptb_trace.LATENCY=12",
+        "-Ptb_trace.PREFETCH_POLICY=2",
+        "-o",
+        "build/benchmarks/trace_policy2.vvp",
+        "level4/rtl/ai_cache.sv",
+        "level4/rtl/next_line_prefetcher.sv",
+        "level4/rtl/stride_prefetcher.sv",
+        "level4/tb/dram_model.sv",
+        "level4/tb/tb_trace.sv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/compile_policy2.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/zero_gap_stream.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/zero_gap_stream__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/zero_gap_stream__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/zero_gap_stream.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/zero_gap_stream__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/zero_gap_stream__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/zero_gap_stream.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/zero_gap_stream__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/zero_gap_stream__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/tensor_stream.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/tensor_stream__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/tensor_stream__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/tensor_stream.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/tensor_stream__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/tensor_stream__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/tensor_stream.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/tensor_stream__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/tensor_stream__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/column_stride.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/column_stride__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/column_stride__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/column_stride.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/column_stride__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/column_stride__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/column_stride.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/column_stride__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/column_stride__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/tiled_reuse.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/tiled_reuse__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/tiled_reuse__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/tiled_reuse.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/tiled_reuse__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/tiled_reuse__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/tiled_reuse.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/tiled_reuse__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/tiled_reuse__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/embedding_gather.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/embedding_gather__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/embedding_gather__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/embedding_gather.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/embedding_gather__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/embedding_gather__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/embedding_gather.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/embedding_gather__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/embedding_gather__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/interleaved_conflicting.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/interleaved_conflicting__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/interleaved_conflicting__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/interleaved_conflicting.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/interleaved_conflicting__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/interleaved_conflicting__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/interleaved_conflicting.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/interleaved_conflicting__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/interleaved_conflicting__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/phase_shift.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/phase_shift__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/phase_shift__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/phase_shift.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/phase_shift__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/phase_shift__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/phase_shift.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/phase_shift__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/phase_shift__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/pollution_return.mem",
+        "+COUNT=320",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/pollution_return__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/pollution_return__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/pollution_return.mem",
+        "+COUNT=320",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/pollution_return__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/pollution_return__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/pollution_return.mem",
+        "+COUNT=320",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/pollution_return__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/pollution_return__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/three_line_bursts.mem",
+        "+COUNT=192",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/three_line_bursts__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/three_line_bursts__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/three_line_bursts.mem",
+        "+COUNT=192",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/three_line_bursts__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/three_line_bursts__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/three_line_bursts.mem",
+        "+COUNT=192",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/three_line_bursts__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/three_line_bursts__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/two_stream_disjoint_sets.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/two_stream_disjoint_sets__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/two_stream_disjoint_sets__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/two_stream_disjoint_sets.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/two_stream_disjoint_sets__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/two_stream_disjoint_sets__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/two_stream_disjoint_sets.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/two_stream_disjoint_sets__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/two_stream_disjoint_sets__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/same_line.mem",
+        "+COUNT=16",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/same_line__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/same_line__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/same_line.mem",
+        "+COUNT=16",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/same_line__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/same_line__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/same_line.mem",
+        "+COUNT=16",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/same_line__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/same_line__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/modelled_matmul_ijk_ab_reads.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/modelled_matmul_ijk_ab_reads__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/modelled_matmul_ijk_ab_reads__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/modelled_matmul_ijk_ab_reads.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/modelled_matmul_ijk_ab_reads__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/modelled_matmul_ijk_ab_reads__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/modelled_matmul_ijk_ab_reads.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/modelled_matmul_ijk_ab_reads__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/modelled_matmul_ijk_ab_reads__stride.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/modelled_matmul_ikj_ab_reads.mem",
+        "+COUNT=512",
+        "+PF=0",
+        "+OUT=build/benchmarks/runs/modelled_matmul_ikj_ab_reads__none.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/modelled_matmul_ikj_ab_reads__none.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy2.vvp",
+        "+TRACE=build/benchmarks/replay/modelled_matmul_ikj_ab_reads.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/modelled_matmul_ikj_ab_reads__next_line.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/modelled_matmul_ikj_ab_reads__next_line.log",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "vvp",
+        "build/benchmarks/trace_policy1.vvp",
+        "+TRACE=build/benchmarks/replay/modelled_matmul_ikj_ab_reads.mem",
+        "+COUNT=512",
+        "+PF=1",
+        "+OUT=build/benchmarks/runs/modelled_matmul_ikj_ab_reads__stride.csv"
+      ],
+      "cwd": "Phase1",
+      "log": "build/benchmarks/runs/modelled_matmul_ikj_ab_reads__stride.log",
+      "exit_code": 0
+    }
+  ],
+  "successful_runs": 39,
+  "checked_responses": 16944
+}

@@ -1,0 +1,101 @@
+Final CHECK/stat excerpt from the executed generic synthesis log.
+Full generated log: build/synthesis/stride.log
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module ai_cache...
+Checking module stride_prefetcher...
+Found and reported 0 problems.
+
+7. Printing statistics.
+
+=== ai_cache ===
+
+        +----------Local Count, excluding submodules.
+        |
+    22298 wires
+    33357 wire bits
+      292 public wires
+    10710 public wire bits
+       21 ports
+      427 port bits
+    32635 cells
+      317   $_ANDNOT_
+     2933   $_AND_
+       67   $_DFF_P_
+    10879   $_MUX_
+     4489   $_NAND_
+      265   $_NOR_
+       31   $_NOT_
+      890   $_ORNOT_
+     2132   $_OR_
+    10048   $_SDFFCE_PN0P_
+      279   $_SDFFE_PP0P_
+       53   $_SDFF_PP0_
+       16   $_XNOR_
+      236   $_XOR_
+        1 submodules
+        1   stride_prefetcher
+
+=== stride_prefetcher ===
+
+        +----------Local Count, excluding submodules.
+        |
+      395 wires
+      707 wire bits
+       13 public wires
+      180 public wire bits
+        7 ports
+       61 port bits
+      610 cells
+        8   $_ANDNOT_
+      203   $_AND_
+       60   $_NAND_
+       37   $_NOR_
+       33   $_NOT_
+        9   $_ORNOT_
+       46   $_OR_
+       88   $_SDFFE_PP0P_
+        1   $_SDFF_PP0_
+       19   $_XNOR_
+      106   $_XOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |
+    33245 ai_cache
+      610 stride_prefetcher
+
+        +----------Count including submodules.
+        |
+    22693 wires
+    34064 wire bits
+      305 public wires
+    10890 public wire bits
+       28 ports
+      488 port bits
+        - memories
+        - memory bits
+        - processes
+    33245 cells
+      325   $_ANDNOT_
+     3136   $_AND_
+       67   $_DFF_P_
+    10879   $_MUX_
+     4549   $_NAND_
+      302   $_NOR_
+       64   $_NOT_
+      899   $_ORNOT_
+     2178   $_OR_
+    10048   $_SDFFCE_PN0P_
+      367   $_SDFFE_PP0P_
+       54   $_SDFF_PP0_
+       35   $_XNOR_
+      342   $_XOR_
+        1 submodules
+        1   stride_prefetcher
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 2ade2e916d, time: 11.66s, user: 11.67s, system: 0.00s
+Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
+Time spent: 72% 1x abc (8 sec), 6% 28x opt_expr (0 sec), ...
