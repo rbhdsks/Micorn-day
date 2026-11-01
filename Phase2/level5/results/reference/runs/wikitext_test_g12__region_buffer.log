@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/wikitext_test_g12.mem pf=1 policy=1 checked=2048 completion=40396 quiescent=40398
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 404020000 (1ps)

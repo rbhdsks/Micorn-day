@@ -1,0 +1,7 @@
+context_stress
+conv1d
+depthwise1d
+embedding_hot
+gemm_tiled
+legacy_diagnostic
+wikitext_embedding

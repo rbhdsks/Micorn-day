@@ -1,0 +1,32 @@
+{
+  "primary_runs": 385,
+  "sensitivity_runs": 20,
+  "checked_responses": 338232,
+  "baseline_reference_equivalence_checks": 39,
+  "selection_sha256_before_held_out": "ecf51c457b3fbe13bb994a8f1a6995c4b37a3642c25eaef09af1209c36f98996",
+  "selection_sha256_after_held_out": "ecf51c457b3fbe13bb994a8f1a6995c4b37a3642c25eaef09af1209c36f98996",
+  "pareto_by_split": {
+    "validation": [
+      "next_line",
+      "victim_buffer",
+      "region_buffer",
+      "context_feedback"
+    ],
+    "held_out": [
+      "next_line",
+      "victim_buffer"
+    ],
+    "regression": [
+      "victim_buffer",
+      "region_buffer",
+      "context_feedback"
+    ],
+    "stress": [
+      "none",
+      "stride",
+      "victim_buffer",
+      "global_buffer"
+    ]
+  },
+  "statistical_scope": "exact outcomes for finite declared suite; no real-workload confidence interval; seeds change kernel shape/layout and synthetic indices, gaps are correlated replays"
+}

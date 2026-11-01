@@ -1,0 +1,106 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "variant": "global_buffer",
+      "seed": 2477507095,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=72891"
+    },
+    {
+      "variant": "global_buffer",
+      "seed": 305461950,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=71728"
+    },
+    {
+      "variant": "region_buffer",
+      "seed": 2477507095,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=72422"
+    },
+    {
+      "variant": "region_buffer",
+      "seed": 305461950,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=71654"
+    },
+    {
+      "variant": "context_feedback",
+      "seed": 2477507095,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=72422"
+    },
+    {
+      "variant": "context_feedback",
+      "seed": 305461950,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=71654"
+    },
+    {
+      "variant": "victim_buffer",
+      "seed": 2477507095,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=71825"
+    },
+    {
+      "variant": "victim_buffer",
+      "seed": 305461950,
+      "simulator": "Icarus",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=71212"
+    },
+    {
+      "variant": "context_feedback",
+      "seed": 2477507095,
+      "simulator": "Verilator with12concurrent properties",
+      "accepted": 4000,
+      "checked": 3998,
+      "reset_canceled": 2,
+      "pass_line": "PASS: independent requests=4000 checked=3998 canceled=2 SENDreset=1 WAITreset=1 cycles=72422"
+    }
+  ],
+  "checked_responses": 35982,
+  "reset_canceled_demands": 18,
+  "strict_lint_configurations": 4,
+  "reviewed_waivers": [
+    "cpu_req_addr[1:0] unused because interface accepts aligned words only; importer/scoreboards assert alignment"
+  ],
+  "source_sha256": {
+    "Phase2/level4/rtl/ai_cache_context.sv": "9b4ec96c34a7de184b8461132f84360af47b19ce23460f96a7a1d3f0a6417893",
+    "Phase2/level4/rtl/region_stride_prefetcher.sv": "20efd54cfa3b9337231cdd870913c5c444dfbcebc9645fb992c74cdb1f59e52d",
+    "Phase1/level4/rtl/stride_prefetcher.sv": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe",
+    "Phase2/level4/audit_tests/tb_independent.sv": "055c373c5a738a92f15d88506c451ba60fac5579339e09db3e423c525d3aff72",
+    "Phase2/level4/audit_tests/context_sva.sv": "ad6db48e0683d9e442a60969175b84fe5c9a55d07dc7bc9becb545059c8e7c62",
+    "Phase2/level4/lint/intentional.vlt": "991f8f9aab3ff4942d22243be9a32aa29057f93f794ebbdf5281698e694d6d13",
+    "Phase2/level4/lint/run_checks.py": "910544f4648ba9da8797237246e1fb1c1a2864f5a2159930d53ee96a84be18ce"
+  },
+  "limits": [
+    "Finite simulation, not formal proof",
+    "Simulator-dependent driver scheduling means correctness checks, not cycle equivalence between tools",
+    "Reset is shared with memory and cancels its outstanding epoch"
+  ]
+}

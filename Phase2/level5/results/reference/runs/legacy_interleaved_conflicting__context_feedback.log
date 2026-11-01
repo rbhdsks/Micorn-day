@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_interleaved_conflicting.mem pf=1 policy=1 checked=512 completion=12626 quiescent=12640
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 126440000 (1ps)

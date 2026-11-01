@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_embedding_gather.mem pf=1 policy=1 checked=512 completion=12767 quiescent=12769
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 127730000 (1ps)

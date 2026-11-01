@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/embedding_hot_s202_g12.mem pf=1 policy=1 checked=768 completion=14139 quiescent=14141
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 141450000 (1ps)

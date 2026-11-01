@@ -1,0 +1,1487 @@
+{
+  "schema_version": 2,
+  "cases": [
+    {
+      "case_id": "legacy_zero_gap_stream",
+      "workload": "zero_gap_stream",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "e50d3d27699ae916899b28e74f125f33c74a3b2a594466199e6a4959ed46e20d",
+      "file": "legacy_zero_gap_stream.csv",
+      "metadata": {
+        "source": {
+          "name": "zero_gap_stream",
+          "file": "zero_gap_stream.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "b20bd69c09ddd33f9fd77f5d29c0024b953563ed726c3672c138f60b76e50b09",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_tensor_stream",
+      "workload": "tensor_stream",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 6,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "726467040aa96d04d0435f39aca2b3d43278bc5e31a250b333102cb074a1ec97",
+      "file": "legacy_tensor_stream.csv",
+      "metadata": {
+        "source": {
+          "name": "tensor_stream",
+          "file": "tensor_stream.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "969dc1fedeb5bf2a4ecdd8f7749e343032431cca1645a7c13d81f70a6e673a92",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_column_stride",
+      "workload": "column_stride",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 20,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "f847a83aa8ad79f10d9379fcb516debaeaec9eede3f46488e606e0aa2d6b58d0",
+      "file": "legacy_column_stride.csv",
+      "metadata": {
+        "source": {
+          "name": "column_stride",
+          "file": "column_stride.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "efab6600ad5181c77542b961d9e6257e7c5cc1e2f28bef7decba94359490f692",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_tiled_reuse",
+      "workload": "tiled_reuse",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 6,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "eb002082e04f133fe030a76e8120ef7f11845366be87ae59573cf6effcbe43c2",
+      "file": "legacy_tiled_reuse.csv",
+      "metadata": {
+        "source": {
+          "name": "tiled_reuse",
+          "file": "tiled_reuse.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "f65080041786f7d6cdd39c33601e35851576e81d287791b7774b0c34ca8da6df",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_embedding_gather",
+      "workload": "embedding_gather",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": 20261101,
+      "gap_cycles": 4,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "ec64a69257b6778a2eed6473e231022e8fa3f9920d21b7408da32d1f171d1123",
+      "file": "legacy_embedding_gather.csv",
+      "metadata": {
+        "source": {
+          "name": "embedding_gather",
+          "file": "embedding_gather.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "6549619cd492d26d0224067aaed395cb77791bd67bc5e089c49a68818e82cb82",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": 20261101
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_interleaved_conflicting",
+      "workload": "interleaved_conflicting",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 20,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "517f7d5dec094c2356c3061ddc618ba30482e405246e2c0a66eac0d99f424fdd",
+      "file": "legacy_interleaved_conflicting.csv",
+      "metadata": {
+        "source": {
+          "name": "interleaved_conflicting",
+          "file": "interleaved_conflicting.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "36b3a1ba3b74d68ea74cecc384e68e19b3102c1ce62258faab49fc6edfed40ae",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_phase_shift",
+      "workload": "phase_shift",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 20,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "595b227712afc84de4cb40e4ef24cc776e86909de343421f2fbd2f85fa917163",
+      "file": "legacy_phase_shift.csv",
+      "metadata": {
+        "source": {
+          "name": "phase_shift",
+          "file": "phase_shift.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "dd582ec01fee5480dce9e0aaaf9511a692ada726d6185dd87defe418e7a96887",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_pollution_return",
+      "workload": "pollution_return",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 20,
+      "memory_latency": 12,
+      "rows": 320,
+      "sha256": "501d19d587ee778050775f8fa4900cbdc24ed7a88b48757fd88a5938f399dce9",
+      "file": "legacy_pollution_return.csv",
+      "metadata": {
+        "source": {
+          "name": "pollution_return",
+          "file": "pollution_return.csv",
+          "kind": "synthetic_pattern",
+          "rows": 320,
+          "sha256": "ceed5a3910875b52d8eb7a4d027608f04056edccb0976db0aa330b61b899b742",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_three_line_bursts",
+      "workload": "three_line_bursts",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 20,
+      "memory_latency": 12,
+      "rows": 192,
+      "sha256": "2be4b3c553395ab5115ab2c65838d70ed616caad47698a934925664cb12a5bc2",
+      "file": "legacy_three_line_bursts.csv",
+      "metadata": {
+        "source": {
+          "name": "three_line_bursts",
+          "file": "three_line_bursts.csv",
+          "kind": "synthetic_pattern",
+          "rows": 192,
+          "sha256": "63355ac6c64c285c8531a968e2519fdda6717161fac99547c03522f4fbdcc2fd",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_two_stream_disjoint_sets",
+      "workload": "two_stream_disjoint_sets",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 20,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "0a79a93f42962833111f6d95c1c8d465c05fee8fd399cb67b659f17bebc165e3",
+      "file": "legacy_two_stream_disjoint_sets.csv",
+      "metadata": {
+        "source": {
+          "name": "two_stream_disjoint_sets",
+          "file": "two_stream_disjoint_sets.csv",
+          "kind": "synthetic_pattern",
+          "rows": 512,
+          "sha256": "cc306cc9a332c7cecc044f25689a80dbdc5ec3295878e8c0d4450c30646e9b1f",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_same_line",
+      "workload": "same_line",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "synthetic_pattern",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 16,
+      "sha256": "ade43fea5429be2d11f060eff71ff97b0cdb41c0d8c30142e413293ef6149357",
+      "file": "legacy_same_line.csv",
+      "metadata": {
+        "source": {
+          "name": "same_line",
+          "file": "same_line.csv",
+          "kind": "synthetic_pattern",
+          "rows": 16,
+          "sha256": "0332b849a7c26d4bcbc9d8834d2011f61a9b6ea8f27c2bdd71af088b4fa0e255",
+          "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+          "seed": null
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_modelled_matmul_ijk_ab_reads",
+      "workload": "modelled_matmul_ijk_ab_reads",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "filtered_modelled_algorithm",
+      "seed": null,
+      "gap_cycles": 6,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "3fa78d3a7fa628afeb38ac67315b41c972e0d9a81b4ca84a4e4abaf740fa3ad3",
+      "file": "legacy_modelled_matmul_ijk_ab_reads.csv",
+      "metadata": {
+        "source": {
+          "name": "modelled_matmul_ijk_ab_reads",
+          "file": "modelled_matmul_ijk_ab_reads.csv",
+          "kind": "filtered_modelled_algorithm",
+          "rows": 512,
+          "sha256": "62bab677604bc0853d636753f622894e9e1c7b262c0194e6fc6551de4cd936ae",
+          "provenance": "Nitesh Level 1 scalar matmul generator; logical A/B compute reads only; not captured machine accesses",
+          "source_generator": "level1/generate_matmul_trace.py",
+          "source_generator_sha256": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+          "source_file": "modelled_sources/ijk/trace.csv",
+          "source_sha256": "6d6f571fda062c255ef0f6e71ddcc87bf6ffc1c44c913e098cb7def543df90f8",
+          "config": {
+            "m": 4,
+            "k": 8,
+            "n": 8,
+            "element_size": 4,
+            "alignment": 4096
+          },
+          "loop_order": "ijk",
+          "excluded_rows": 544,
+          "filter": "phase=compute AND operation=R AND operand in {A,B}; exclude C, writes and initialisation",
+          "gap_cycles": 6,
+          "gap_source": "explicit replay assumption, not measured compute timing",
+          "numerical_generator_reference_passed": true,
+          "rtl_memory_contents": "address-derived deterministic word pattern, not matrix numeric values"
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "legacy_modelled_matmul_ikj_ab_reads",
+      "workload": "modelled_matmul_ikj_ab_reads",
+      "family": "legacy_diagnostic",
+      "split": "regression",
+      "source_kind": "filtered_modelled_algorithm",
+      "seed": null,
+      "gap_cycles": 6,
+      "memory_latency": 12,
+      "rows": 512,
+      "sha256": "9fd766f05ed7b77f3e0b263ef8d83e4c3014d44fdd4f56b76dc9c31756862003",
+      "file": "legacy_modelled_matmul_ikj_ab_reads.csv",
+      "metadata": {
+        "source": {
+          "name": "modelled_matmul_ikj_ab_reads",
+          "file": "modelled_matmul_ikj_ab_reads.csv",
+          "kind": "filtered_modelled_algorithm",
+          "rows": 512,
+          "sha256": "63540bee3bb1007d4372641efbf1159f28bc0aa9b7115f0c4b9b2656dee20650",
+          "provenance": "Nitesh Level 1 scalar matmul generator; logical A/B compute reads only; not captured machine accesses",
+          "source_generator": "level1/generate_matmul_trace.py",
+          "source_generator_sha256": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+          "source_file": "modelled_sources/ikj/trace.csv",
+          "source_sha256": "5e413732f9cb8ec519c47366f45971347e68252cb5f6bef08c00b219f73b6001",
+          "config": {
+            "m": 4,
+            "k": 8,
+            "n": 8,
+            "element_size": 4,
+            "alignment": 4096
+          },
+          "loop_order": "ikj",
+          "excluded_rows": 544,
+          "filter": "phase=compute AND operation=R AND operand in {A,B}; exclude C, writes and initialisation",
+          "gap_cycles": 6,
+          "gap_source": "explicit replay assumption, not measured compute timing",
+          "numerical_generator_reference_passed": true,
+          "rtl_memory_contents": "address-derived deterministic word pattern, not matrix numeric values"
+        },
+        "contract": "byte-for-byte same address/gap rows as Phase1 generator"
+      }
+    },
+    {
+      "case_id": "gemm_tiled_s11_g0",
+      "workload": "gemm_tiled",
+      "family": "gemm_tiled",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "80daa1818ca4d16f54e069b30e60a8f9ab0002d3150a060a5918326c9a4ccaab",
+      "file": "gemm_tiled_s11_g0.csv",
+      "metadata": {
+        "config": {
+          "m": 4,
+          "n": 8,
+          "k": 12,
+          "tile": 4,
+          "layout": "row-major A,B; blocked ii,jj,kk,i,j,k"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "46c16b568d70a798247c8d7c62a1a4b4849da99cb2e0cc3fc5a3fbbe65a1fda5",
+        "operand_bases": [
+          16777984,
+          33554688
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "gemm_tiled_s11_g12",
+      "workload": "gemm_tiled",
+      "family": "gemm_tiled",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "490d3d6b96a8e87c242538af283d2dbe0c9981ad32ddc65572face52b752256a",
+      "file": "gemm_tiled_s11_g12.csv",
+      "metadata": {
+        "config": {
+          "m": 4,
+          "n": 8,
+          "k": 12,
+          "tile": 4,
+          "layout": "row-major A,B; blocked ii,jj,kk,i,j,k"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "46c16b568d70a798247c8d7c62a1a4b4849da99cb2e0cc3fc5a3fbbe65a1fda5",
+        "operand_bases": [
+          16777984,
+          33554688
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "gemm_tiled_s101_g0",
+      "workload": "gemm_tiled",
+      "family": "gemm_tiled",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "e7962c48b75ca665e83be1b01f171cf16ff6ddb8c4e43753d14e1582bbdb6dab",
+      "file": "gemm_tiled_s101_g0.csv",
+      "metadata": {
+        "config": {
+          "m": 6,
+          "n": 8,
+          "k": 8,
+          "tile": 4,
+          "layout": "row-major A,B; blocked ii,jj,kk,i,j,k"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "5d2b1cf80708715e43c3a990ac819526ed1ae8300e7ef9fbbee5b7843cf41e0e",
+        "operand_bases": [
+          16777472,
+          33555200
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "gemm_tiled_s101_g12",
+      "workload": "gemm_tiled",
+      "family": "gemm_tiled",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "9fafee512bdd59897d11c5f7f6d390d65b1e2bd67916f1342cfc0d2c4170d21e",
+      "file": "gemm_tiled_s101_g12.csv",
+      "metadata": {
+        "config": {
+          "m": 6,
+          "n": 8,
+          "k": 8,
+          "tile": 4,
+          "layout": "row-major A,B; blocked ii,jj,kk,i,j,k"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "5d2b1cf80708715e43c3a990ac819526ed1ae8300e7ef9fbbee5b7843cf41e0e",
+        "operand_bases": [
+          16777472,
+          33555200
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "gemm_tiled_s202_g0",
+      "workload": "gemm_tiled",
+      "family": "gemm_tiled",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "71ea98e0c3acffd08e4da686235eabd7d3a3ab9583ccc3f0124130f44ab86d16",
+      "file": "gemm_tiled_s202_g0.csv",
+      "metadata": {
+        "config": {
+          "m": 8,
+          "n": 6,
+          "k": 8,
+          "tile": 4,
+          "layout": "row-major A,B; blocked ii,jj,kk,i,j,k"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "577f00eb124a89cd64145738092a2a752c25b6c2da61a95903da206594aedc55",
+        "operand_bases": [
+          16777728,
+          33554944
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "gemm_tiled_s202_g12",
+      "workload": "gemm_tiled",
+      "family": "gemm_tiled",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "f820a66ddad5cd46d995cfca53b235114dac5075052a727cc131ff2ebed7ad30",
+      "file": "gemm_tiled_s202_g12.csv",
+      "metadata": {
+        "config": {
+          "m": 8,
+          "n": 6,
+          "k": 8,
+          "tile": 4,
+          "layout": "row-major A,B; blocked ii,jj,kk,i,j,k"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "577f00eb124a89cd64145738092a2a752c25b6c2da61a95903da206594aedc55",
+        "operand_bases": [
+          16777728,
+          33554944
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "conv1d_s11_g0",
+      "workload": "conv1d",
+      "family": "conv1d",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 1152,
+      "sha256": "4dffae7b9955a03f31613b13a11af6445db0513ea74849bb85797da677569d19",
+      "file": "conv1d_s11_g0.csv",
+      "metadata": {
+        "config": {
+          "input_channels": 3,
+          "output_channels": 2,
+          "length": 34,
+          "kernel_width": 3,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "63c2e537827ba6ffbd3ee6ab51f57ff7b7b5ef8ffb77b7684d8cf0a6d9bb9684",
+        "operand_bases": [
+          16777984,
+          33554688
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "conv1d_s11_g12",
+      "workload": "conv1d",
+      "family": "conv1d",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 1152,
+      "sha256": "29506f221d776c98f3d77bc514165a169e8a5ec7106c94ea2b2f75cb28d74be4",
+      "file": "conv1d_s11_g12.csv",
+      "metadata": {
+        "config": {
+          "input_channels": 3,
+          "output_channels": 2,
+          "length": 34,
+          "kernel_width": 3,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "63c2e537827ba6ffbd3ee6ab51f57ff7b7b5ef8ffb77b7684d8cf0a6d9bb9684",
+        "operand_bases": [
+          16777984,
+          33554688
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "conv1d_s101_g0",
+      "workload": "conv1d",
+      "family": "conv1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 1248,
+      "sha256": "a32b62f335ddb527d482f738ebe5afd1ee73a0575438b97acacc776b0654f323",
+      "file": "conv1d_s101_g0.csv",
+      "metadata": {
+        "config": {
+          "input_channels": 4,
+          "output_channels": 2,
+          "length": 28,
+          "kernel_width": 3,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "21da00f3bdd84c5c8b3c0c0b07be35d1defefbbdcda2a8c08b61d47fadf0918b",
+        "operand_bases": [
+          16777472,
+          33555200
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "conv1d_s101_g12",
+      "workload": "conv1d",
+      "family": "conv1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 1248,
+      "sha256": "efa2dd63d0ced61a69d92c55140d7c3059923a318b1082476b583b5b9e4fd0a0",
+      "file": "conv1d_s101_g12.csv",
+      "metadata": {
+        "config": {
+          "input_channels": 4,
+          "output_channels": 2,
+          "length": 28,
+          "kernel_width": 3,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "21da00f3bdd84c5c8b3c0c0b07be35d1defefbbdcda2a8c08b61d47fadf0918b",
+        "operand_bases": [
+          16777472,
+          33555200
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "conv1d_s202_g0",
+      "workload": "conv1d",
+      "family": "conv1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 1800,
+      "sha256": "d6e980c6fca4da72afdd794a7ac4d0c3393cb423e027f12ddb910730cbf26b12",
+      "file": "conv1d_s202_g0.csv",
+      "metadata": {
+        "config": {
+          "input_channels": 2,
+          "output_channels": 3,
+          "length": 34,
+          "kernel_width": 5,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "41e9b1d92653bdbf3e9b9a2494becde1c8728639e12d85526dc5d836743662cb",
+        "operand_bases": [
+          16777728,
+          33554944
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "conv1d_s202_g12",
+      "workload": "conv1d",
+      "family": "conv1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 1800,
+      "sha256": "5b9ee71e11a2e4bf636e86c9b2093f14ff0d80663abbf6503d53067da5cd1301",
+      "file": "conv1d_s202_g12.csv",
+      "metadata": {
+        "config": {
+          "input_channels": 2,
+          "output_channels": 3,
+          "length": 34,
+          "kernel_width": 5,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "41e9b1d92653bdbf3e9b9a2494becde1c8728639e12d85526dc5d836743662cb",
+        "operand_bases": [
+          16777728,
+          33554944
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "depthwise1d_s11_g0",
+      "workload": "depthwise1d",
+      "family": "depthwise1d",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 1520,
+      "sha256": "c286c9eda74b61f59c66ad69acb6b08eabb7b299c538ba574b9080a53e2854f3",
+      "file": "depthwise1d_s11_g0.csv",
+      "metadata": {
+        "config": {
+          "channels": 4,
+          "length": 42,
+          "kernel_width": 5,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major depthwise valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "00233837d47e0c8910e95aac76e70883568ed601470ee17ded7b7d4b6ff4b979",
+        "operand_bases": [
+          16777984,
+          33554688
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "depthwise1d_s11_g12",
+      "workload": "depthwise1d",
+      "family": "depthwise1d",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 1520,
+      "sha256": "840351127e48104675cd0837750aa517713efa502864751bcf726bee426e5bd3",
+      "file": "depthwise1d_s11_g12.csv",
+      "metadata": {
+        "config": {
+          "channels": 4,
+          "length": 42,
+          "kernel_width": 5,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major depthwise valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "00233837d47e0c8910e95aac76e70883568ed601470ee17ded7b7d4b6ff4b979",
+        "operand_bases": [
+          16777984,
+          33554688
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "depthwise1d_s101_g0",
+      "workload": "depthwise1d",
+      "family": "depthwise1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 1380,
+      "sha256": "d3ea2123dbf27eaca5f3ec1b5e051fd2949d07546d166caaf8a5f87930dbdd21",
+      "file": "depthwise1d_s101_g0.csv",
+      "metadata": {
+        "config": {
+          "channels": 3,
+          "length": 50,
+          "kernel_width": 5,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major depthwise valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "3fd4169750db7efcf30f52d2e63a39e59b3b3cc5ccf78b0b3e4f094062e61445",
+        "operand_bases": [
+          16777472,
+          33555200
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "depthwise1d_s101_g12",
+      "workload": "depthwise1d",
+      "family": "depthwise1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 1380,
+      "sha256": "fa0129085e63b740dd50dc2da707310195381b13deae27b7096ff4b97db16c78",
+      "file": "depthwise1d_s101_g12.csv",
+      "metadata": {
+        "config": {
+          "channels": 3,
+          "length": 50,
+          "kernel_width": 5,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major depthwise valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "3fd4169750db7efcf30f52d2e63a39e59b3b3cc5ccf78b0b3e4f094062e61445",
+        "operand_bases": [
+          16777472,
+          33555200
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "depthwise1d_s202_g0",
+      "workload": "depthwise1d",
+      "family": "depthwise1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 1056,
+      "sha256": "037bebcba2c0bdbc059f6f19c5ecccfae009cec3b2e59431be955718b431b740",
+      "file": "depthwise1d_s202_g0.csv",
+      "metadata": {
+        "config": {
+          "channels": 4,
+          "length": 46,
+          "kernel_width": 3,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major depthwise valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "e9cb5c7d62aca35667aec4847a3298c8ac8be21dd45640871ab30c781a2045ec",
+        "operand_bases": [
+          16777728,
+          33554944
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "depthwise1d_s202_g12",
+      "workload": "depthwise1d",
+      "family": "depthwise1d",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 1056,
+      "sha256": "dba2e7da4f95708a7d83a0b3a1041fc39e06e283b675a90fd41f4c2086b7f117",
+      "file": "depthwise1d_s202_g12.csv",
+      "metadata": {
+        "config": {
+          "channels": 4,
+          "length": 46,
+          "kernel_width": 3,
+          "stride": 1,
+          "padding": 0,
+          "layout": "channel-major depthwise valid cross-correlation"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "e9cb5c7d62aca35667aec4847a3298c8ac8be21dd45640871ab30c781a2045ec",
+        "operand_bases": [
+          16777728,
+          33554944
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "embedding_hot_s11_g0",
+      "workload": "embedding_hot",
+      "family": "embedding_hot",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "59576efb34b0444f6f08adc25a8333b7933931dd797035ea8e615234e0fa3083",
+      "file": "embedding_hot_s11_g0.csv",
+      "metadata": {
+        "config": {
+          "rows": 512,
+          "dimension": 8,
+          "lookups": 96,
+          "index_distribution": "finite rank weights proportional to (rank+1)^(-1.15)",
+          "output": "sum pooling"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "443171ded484accd39779da30a30ec088cdc9eadfa4f74ebc0aff02180e0ab71",
+        "operand_bases": [
+          16777984
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "embedding_hot_s11_g12",
+      "workload": "embedding_hot",
+      "family": "embedding_hot",
+      "split": "validation",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 11,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "0ed49accb68abf723fe77312e2fb3958af1e3050248761c8753da32b37829ed6",
+      "file": "embedding_hot_s11_g12.csv",
+      "metadata": {
+        "config": {
+          "rows": 512,
+          "dimension": 8,
+          "lookups": 96,
+          "index_distribution": "finite rank weights proportional to (rank+1)^(-1.15)",
+          "output": "sum pooling"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "443171ded484accd39779da30a30ec088cdc9eadfa4f74ebc0aff02180e0ab71",
+        "operand_bases": [
+          16777984
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "embedding_hot_s101_g0",
+      "workload": "embedding_hot",
+      "family": "embedding_hot",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "f0f324bf03f880dda36e449a8628b8ab6fa6b439391c2e442219ffb3d5222732",
+      "file": "embedding_hot_s101_g0.csv",
+      "metadata": {
+        "config": {
+          "rows": 512,
+          "dimension": 8,
+          "lookups": 96,
+          "index_distribution": "finite rank weights proportional to (rank+1)^(-1.15)",
+          "output": "sum pooling"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "d105cfca5232fe6208e596e388328c31eb58e7c76eb90c924ea6b6fc9fbf41a5",
+        "operand_bases": [
+          16777472
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "embedding_hot_s101_g12",
+      "workload": "embedding_hot",
+      "family": "embedding_hot",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 101,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "87bea9ab95d1f0e779fac25afac3c2b8252407aae8eb3cae1b9b44e507478e3a",
+      "file": "embedding_hot_s101_g12.csv",
+      "metadata": {
+        "config": {
+          "rows": 512,
+          "dimension": 8,
+          "lookups": 96,
+          "index_distribution": "finite rank weights proportional to (rank+1)^(-1.15)",
+          "output": "sum pooling"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "d105cfca5232fe6208e596e388328c31eb58e7c76eb90c924ea6b6fc9fbf41a5",
+        "operand_bases": [
+          16777472
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "embedding_hot_s202_g0",
+      "workload": "embedding_hot",
+      "family": "embedding_hot",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "fdda8468bf6ca999340a8e4294245982e00c3415ad39b2ac3bc25d167fad4ee5",
+      "file": "embedding_hot_s202_g0.csv",
+      "metadata": {
+        "config": {
+          "rows": 512,
+          "dimension": 8,
+          "lookups": 96,
+          "index_distribution": "finite rank weights proportional to (rank+1)^(-1.15)",
+          "output": "sum pooling"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "244d2e26a1de956de050530bcf059f7e75d3c0af6e3e3614ba30129a2f2e5fd2",
+        "operand_bases": [
+          16777728
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "embedding_hot_s202_g12",
+      "workload": "embedding_hot",
+      "family": "embedding_hot",
+      "split": "held_out",
+      "source_kind": "instrumented_numeric_kernel",
+      "seed": 202,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 768,
+      "sha256": "7cd3dd30874eceb2d8735e2bc39284b9d78f4011d9b8c6bf0e92938eb77d15e1",
+      "file": "embedding_hot_s202_g12.csv",
+      "metadata": {
+        "config": {
+          "rows": 512,
+          "dimension": 8,
+          "lookups": 96,
+          "index_distribution": "finite rank weights proportional to (rank+1)^(-1.15)",
+          "output": "sum pooling"
+        },
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "244d2e26a1de956de050530bcf059f7e75d3c0af6e3e3614ba30129a2f2e5fd2",
+        "operand_bases": [
+          16777728
+        ],
+        "instrumentation": "actual scalar input reads performed while calculating output; independent uninstrumented sum/product reference; no output writes replayed"
+      }
+    },
+    {
+      "case_id": "wikitext_train_g0",
+      "workload": "wikitext_embedding",
+      "family": "wikitext_embedding",
+      "split": "validation",
+      "source_kind": "authentic_input_modelled_layout",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 2048,
+      "sha256": "7c82df9d6a388f2e22dd721767e36b9ab62237985bd398f6f4baefc806776b5e",
+      "file": "wikitext_train_g0.csv",
+      "metadata": {
+        "source": {
+          "source_url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce%2Fwikitext&config=wikitext-2-raw-v1&split=train&offset=0&length=100",
+          "text_sha256": "88fa1a10cacc84b916b9d730259190ade358373a9797cfdb96049e17762529d6",
+          "source_rows": 100,
+          "source_total_rows": 36718,
+          "dataset": "Salesforce/wikitext / wikitext-2-raw-v1",
+          "dataset_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+          "license_note": "Upstream metadata names CC BY-SA 3.0; dataset card text links CC BY-SA 4.0. Source text is not redistributed here.",
+          "snapshot_contract": "First100 API rows in published split; exact concatenated UTF-8 text checksum required. API URL is live, checksum prevents silent drift."
+        },
+        "tokens": 256,
+        "dimension": 8,
+        "table_rows": 65536,
+        "tokenizer": "UTF-8 whitespace tokens, case/punctuation preserved; BLAKE2b64 big-endian modulo65536; fixed mapper, not BPE or trained tokenizer",
+        "unique_tokens": 154,
+        "unique_embedding_ids": 153,
+        "hash_collisions": 1,
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "d3a756d325774c2bff92d8cedbbc158f7fea6c89b1c98e16971cfbf618f1753a",
+        "timing_and_layout": "modelled row-major eight-word embeddings; no captured CPU/GPU instructions or inference timing"
+      }
+    },
+    {
+      "case_id": "wikitext_train_g12",
+      "workload": "wikitext_embedding",
+      "family": "wikitext_embedding",
+      "split": "validation",
+      "source_kind": "authentic_input_modelled_layout",
+      "seed": null,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 2048,
+      "sha256": "f4cd4e5d2e3cca89bafc26e36484c2ffef59d5b84a0dfe05a1dc5dcb0369ca27",
+      "file": "wikitext_train_g12.csv",
+      "metadata": {
+        "source": {
+          "source_url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce%2Fwikitext&config=wikitext-2-raw-v1&split=train&offset=0&length=100",
+          "text_sha256": "88fa1a10cacc84b916b9d730259190ade358373a9797cfdb96049e17762529d6",
+          "source_rows": 100,
+          "source_total_rows": 36718,
+          "dataset": "Salesforce/wikitext / wikitext-2-raw-v1",
+          "dataset_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+          "license_note": "Upstream metadata names CC BY-SA 3.0; dataset card text links CC BY-SA 4.0. Source text is not redistributed here.",
+          "snapshot_contract": "First100 API rows in published split; exact concatenated UTF-8 text checksum required. API URL is live, checksum prevents silent drift."
+        },
+        "tokens": 256,
+        "dimension": 8,
+        "table_rows": 65536,
+        "tokenizer": "UTF-8 whitespace tokens, case/punctuation preserved; BLAKE2b64 big-endian modulo65536; fixed mapper, not BPE or trained tokenizer",
+        "unique_tokens": 154,
+        "unique_embedding_ids": 153,
+        "hash_collisions": 1,
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "d3a756d325774c2bff92d8cedbbc158f7fea6c89b1c98e16971cfbf618f1753a",
+        "timing_and_layout": "modelled row-major eight-word embeddings; no captured CPU/GPU instructions or inference timing"
+      }
+    },
+    {
+      "case_id": "wikitext_validation_g0",
+      "workload": "wikitext_embedding",
+      "family": "wikitext_embedding",
+      "split": "held_out",
+      "source_kind": "authentic_input_modelled_layout",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 2048,
+      "sha256": "93815ee5b08a76d665011c12e7a26e8a7facc0d55ad4bb6e48cdb655f8326ab1",
+      "file": "wikitext_validation_g0.csv",
+      "metadata": {
+        "source": {
+          "source_url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce%2Fwikitext&config=wikitext-2-raw-v1&split=validation&offset=0&length=100",
+          "text_sha256": "417e7b238525b0a167f16cf0668930317d2c1737579ca337859a7acf372e498d",
+          "source_rows": 100,
+          "source_total_rows": 3760,
+          "dataset": "Salesforce/wikitext / wikitext-2-raw-v1",
+          "dataset_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+          "license_note": "Upstream metadata names CC BY-SA 3.0; dataset card text links CC BY-SA 4.0. Source text is not redistributed here.",
+          "snapshot_contract": "First100 API rows in published split; exact concatenated UTF-8 text checksum required. API URL is live, checksum prevents silent drift."
+        },
+        "tokens": 256,
+        "dimension": 8,
+        "table_rows": 65536,
+        "tokenizer": "UTF-8 whitespace tokens, case/punctuation preserved; BLAKE2b64 big-endian modulo65536; fixed mapper, not BPE or trained tokenizer",
+        "unique_tokens": 132,
+        "unique_embedding_ids": 132,
+        "hash_collisions": 0,
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "ebfc28e8c3563d851ece57560865afa9652119a3f779de3f7471d92c60f1ba89",
+        "timing_and_layout": "modelled row-major eight-word embeddings; no captured CPU/GPU instructions or inference timing"
+      }
+    },
+    {
+      "case_id": "wikitext_validation_g12",
+      "workload": "wikitext_embedding",
+      "family": "wikitext_embedding",
+      "split": "held_out",
+      "source_kind": "authentic_input_modelled_layout",
+      "seed": null,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 2048,
+      "sha256": "e1f821df6373c750c6a6931585e31dd9cacae40a47c85d2d61ad192db85fde18",
+      "file": "wikitext_validation_g12.csv",
+      "metadata": {
+        "source": {
+          "source_url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce%2Fwikitext&config=wikitext-2-raw-v1&split=validation&offset=0&length=100",
+          "text_sha256": "417e7b238525b0a167f16cf0668930317d2c1737579ca337859a7acf372e498d",
+          "source_rows": 100,
+          "source_total_rows": 3760,
+          "dataset": "Salesforce/wikitext / wikitext-2-raw-v1",
+          "dataset_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+          "license_note": "Upstream metadata names CC BY-SA 3.0; dataset card text links CC BY-SA 4.0. Source text is not redistributed here.",
+          "snapshot_contract": "First100 API rows in published split; exact concatenated UTF-8 text checksum required. API URL is live, checksum prevents silent drift."
+        },
+        "tokens": 256,
+        "dimension": 8,
+        "table_rows": 65536,
+        "tokenizer": "UTF-8 whitespace tokens, case/punctuation preserved; BLAKE2b64 big-endian modulo65536; fixed mapper, not BPE or trained tokenizer",
+        "unique_tokens": 132,
+        "unique_embedding_ids": 132,
+        "hash_collisions": 0,
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "ebfc28e8c3563d851ece57560865afa9652119a3f779de3f7471d92c60f1ba89",
+        "timing_and_layout": "modelled row-major eight-word embeddings; no captured CPU/GPU instructions or inference timing"
+      }
+    },
+    {
+      "case_id": "wikitext_test_g0",
+      "workload": "wikitext_embedding",
+      "family": "wikitext_embedding",
+      "split": "held_out",
+      "source_kind": "authentic_input_modelled_layout",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 12,
+      "rows": 2048,
+      "sha256": "f74b9883a03a219df605b83c9daaf902b175e7bd4edb50a1ed426f6c7f0b88ed",
+      "file": "wikitext_test_g0.csv",
+      "metadata": {
+        "source": {
+          "source_url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce%2Fwikitext&config=wikitext-2-raw-v1&split=test&offset=0&length=100",
+          "text_sha256": "cb700e96eb44e3c39a4dd0cfd811896a7eef67cbf8c1d2c4b5739a3449a34386",
+          "source_rows": 100,
+          "source_total_rows": 4358,
+          "dataset": "Salesforce/wikitext / wikitext-2-raw-v1",
+          "dataset_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+          "license_note": "Upstream metadata names CC BY-SA 3.0; dataset card text links CC BY-SA 4.0. Source text is not redistributed here.",
+          "snapshot_contract": "First100 API rows in published split; exact concatenated UTF-8 text checksum required. API URL is live, checksum prevents silent drift."
+        },
+        "tokens": 256,
+        "dimension": 8,
+        "table_rows": 65536,
+        "tokenizer": "UTF-8 whitespace tokens, case/punctuation preserved; BLAKE2b64 big-endian modulo65536; fixed mapper, not BPE or trained tokenizer",
+        "unique_tokens": 124,
+        "unique_embedding_ids": 124,
+        "hash_collisions": 0,
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "b929b85b159910eb076c4bab3f3eb5ba157f2720f75148b23888c3e2c58e1d62",
+        "timing_and_layout": "modelled row-major eight-word embeddings; no captured CPU/GPU instructions or inference timing"
+      }
+    },
+    {
+      "case_id": "wikitext_test_g12",
+      "workload": "wikitext_embedding",
+      "family": "wikitext_embedding",
+      "split": "held_out",
+      "source_kind": "authentic_input_modelled_layout",
+      "seed": null,
+      "gap_cycles": 12,
+      "memory_latency": 12,
+      "rows": 2048,
+      "sha256": "4edd64803d3fee6e62330e93dfbe3bcd81407471fb31b47108e7117308fcff3f",
+      "file": "wikitext_test_g12.csv",
+      "metadata": {
+        "source": {
+          "source_url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce%2Fwikitext&config=wikitext-2-raw-v1&split=test&offset=0&length=100",
+          "text_sha256": "cb700e96eb44e3c39a4dd0cfd811896a7eef67cbf8c1d2c4b5739a3449a34386",
+          "source_rows": 100,
+          "source_total_rows": 4358,
+          "dataset": "Salesforce/wikitext / wikitext-2-raw-v1",
+          "dataset_card": "https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md",
+          "license_note": "Upstream metadata names CC BY-SA 3.0; dataset card text links CC BY-SA 4.0. Source text is not redistributed here.",
+          "snapshot_contract": "First100 API rows in published split; exact concatenated UTF-8 text checksum required. API URL is live, checksum prevents silent drift."
+        },
+        "tokens": 256,
+        "dimension": 8,
+        "table_rows": 65536,
+        "tokenizer": "UTF-8 whitespace tokens, case/punctuation preserved; BLAKE2b64 big-endian modulo65536; fixed mapper, not BPE or trained tokenizer",
+        "unique_tokens": 124,
+        "unique_embedding_ids": 124,
+        "hash_collisions": 0,
+        "numeric_reference_passed": true,
+        "numeric_output_sha256": "b929b85b159910eb076c4bab3f3eb5ba157f2720f75148b23888c3e2c58e1d62",
+        "timing_and_layout": "modelled row-major eight-word embeddings; no captured CPU/GPU instructions or inference timing"
+      }
+    },
+    {
+      "case_id": "boundary_crossing_g0_l0",
+      "workload": "boundary_crossing",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 0,
+      "rows": 128,
+      "sha256": "9805f27c936154a0454611be5c7c8ea81a82672bc753ad8366fb7ef6d7173150",
+      "file": "boundary_crossing_g0_l0.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "boundary_crossing_g24_l0",
+      "workload": "boundary_crossing",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 24,
+      "memory_latency": 0,
+      "rows": 128,
+      "sha256": "ccccae61df1a46f1429e02bf6fe12f2869b9add5f8fe46abfbb1aa5717194232",
+      "file": "boundary_crossing_g24_l0.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "boundary_crossing_g0_l48",
+      "workload": "boundary_crossing",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 48,
+      "rows": 128,
+      "sha256": "9805f27c936154a0454611be5c7c8ea81a82672bc753ad8366fb7ef6d7173150",
+      "file": "boundary_crossing_g0_l48.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "boundary_crossing_g24_l48",
+      "workload": "boundary_crossing",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 24,
+      "memory_latency": 48,
+      "rows": 128,
+      "sha256": "ccccae61df1a46f1429e02bf6fe12f2869b9add5f8fe46abfbb1aa5717194232",
+      "file": "boundary_crossing_g24_l48.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "same_region_interleave_g0_l0",
+      "workload": "same_region_interleave",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 0,
+      "rows": 128,
+      "sha256": "5a6e72f073e598e7cfa5e74ae196bc3322bb2b6ccf95f8cb32184c59d4bef428",
+      "file": "same_region_interleave_g0_l0.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "same_region_interleave_g24_l0",
+      "workload": "same_region_interleave",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 24,
+      "memory_latency": 0,
+      "rows": 128,
+      "sha256": "6e2f9b88fe91268b89dc0249a6fc8a0d71f2b66b97c0d7d332fbc7bd262c98f5",
+      "file": "same_region_interleave_g24_l0.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "same_region_interleave_g0_l48",
+      "workload": "same_region_interleave",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 48,
+      "rows": 128,
+      "sha256": "5a6e72f073e598e7cfa5e74ae196bc3322bb2b6ccf95f8cb32184c59d4bef428",
+      "file": "same_region_interleave_g0_l48.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "same_region_interleave_g24_l48",
+      "workload": "same_region_interleave",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 24,
+      "memory_latency": 48,
+      "rows": 128,
+      "sha256": "6e2f9b88fe91268b89dc0249a6fc8a0d71f2b66b97c0d7d332fbc7bd262c98f5",
+      "file": "same_region_interleave_g24_l48.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "mixed_regions_g0_l0",
+      "workload": "mixed_regions",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 0,
+      "rows": 64,
+      "sha256": "275a3dcc3eb267e3126798dae71e735e1dfc6b3804e1869bd01211ca3264982e",
+      "file": "mixed_regions_g0_l0.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "mixed_regions_g24_l0",
+      "workload": "mixed_regions",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 24,
+      "memory_latency": 0,
+      "rows": 64,
+      "sha256": "376f2c05d053c3e06a015bc7a099c1b78113d141ef3ed27bb3002e8faaff3d62",
+      "file": "mixed_regions_g24_l0.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "mixed_regions_g0_l48",
+      "workload": "mixed_regions",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 0,
+      "memory_latency": 48,
+      "rows": 64,
+      "sha256": "275a3dcc3eb267e3126798dae71e735e1dfc6b3804e1869bd01211ca3264982e",
+      "file": "mixed_regions_g0_l48.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    },
+    {
+      "case_id": "mixed_regions_g24_l48",
+      "workload": "mixed_regions",
+      "family": "context_stress",
+      "split": "stress",
+      "source_kind": "synthetic_diagnostic",
+      "seed": null,
+      "gap_cycles": 24,
+      "memory_latency": 48,
+      "rows": 64,
+      "sha256": "376f2c05d053c3e06a015bc7a099c1b78113d141ef3ed27bb3002e8faaff3d62",
+      "file": "mixed_regions_g24_l48.csv",
+      "metadata": {
+        "purpose": "address-region boundary/interference/global-feedback coupling diagnostic"
+      }
+    }
+  ],
+  "line_bytes": 16,
+  "read_only_contract": "aligned immutable32-bit inputs; input reads only; fixed serial offered-demand driver",
+  "selection_split": "validation only; seed11 and WikiText published train input; no evaluation results used for threshold or variant choice",
+  "evaluation_split": "held_out: seeds101/202 and WikiText published validation/test; diagnostic/regression separate",
+  "corpus_included": true,
+  "raw_corpus_redistributed": false,
+  "limitations": [
+    "No real model instruction trace or GPU/CPU timing",
+    "Small kernels do not establish production working-set representativeness",
+    "Per-family gaps/layouts are model choices",
+    "Seed variation is not independent application sampling",
+    "RTL returns deterministic address-derived words rather than running tensor arithmetic"
+  ]
+}

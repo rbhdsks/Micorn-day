@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_tiled_reuse.mem pf=0 policy=1 checked=512 completion=6463 quiescent=6465
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 64690000 (1ps)

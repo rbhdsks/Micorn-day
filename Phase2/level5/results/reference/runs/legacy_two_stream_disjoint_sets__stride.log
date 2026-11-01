@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_two_stream_disjoint_sets.mem pf=1 policy=1 checked=512 completion=21417 quiescent=21419
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 214230000 (1ps)

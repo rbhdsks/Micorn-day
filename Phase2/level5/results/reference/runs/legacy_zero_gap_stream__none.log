@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_zero_gap_stream.mem pf=0 policy=1 checked=512 completion=11197 quiescent=11199
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 112030000 (1ps)

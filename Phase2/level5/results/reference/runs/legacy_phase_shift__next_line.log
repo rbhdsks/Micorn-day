@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_phase_shift.mem pf=1 policy=2 checked=512 completion=16828 quiescent=16844
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 168480000 (1ps)

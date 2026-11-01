@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_pollution_return.mem pf=1 policy=2 checked=320 completion=8895 quiescent=8897
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 89010000 (1ps)

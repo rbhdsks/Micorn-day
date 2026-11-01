@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "primary_rows": 385,
+  "matched_cases": 55,
+  "primary_checked_responses": 313208,
+  "aggregate_rows": 28,
+  "selection": "region_buffer",
+  "errors": [],
+  "independence": "Recomputed without importing benchmark metrics/runner modules",
+  "limits": [
+    "This validates finite-suite arithmetic and integrity, not real application representativeness",
+    "Selection timestamp ordering follows retained runner command provenance; a matching seal alone is not an externally notarized experiment"
+  ]
+}

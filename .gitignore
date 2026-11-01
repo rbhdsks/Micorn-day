@@ -10,3 +10,6 @@ Phase1/build/
 
 node_modules/
 Phase1/.chart-data-*/
+Phase2/build/
+Phase2/.chart-data-*/
+.chart-data-*/

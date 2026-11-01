@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/conv1d_s202_g12.mem pf=0 policy=1 checked=1800 completion=30306 quiescent=30308
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 303120000 (1ps)

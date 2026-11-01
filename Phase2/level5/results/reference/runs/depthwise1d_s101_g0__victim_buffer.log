@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/depthwise1d_s101_g0.mem pf=0 policy=1 checked=1380 completion=6928 quiescent=6930
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 69340000 (1ps)

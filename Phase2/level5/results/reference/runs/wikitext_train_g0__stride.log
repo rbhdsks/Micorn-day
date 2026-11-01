@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/wikitext_train_g0.mem pf=1 policy=1 checked=2048 completion=16179 quiescent=16181
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 161850000 (1ps)

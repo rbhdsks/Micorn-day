@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "variants": {
+    "none": {
+      "baseline": true,
+      "policy": 1,
+      "enabled": 0
+    },
+    "next_line": {
+      "baseline": true,
+      "policy": 2,
+      "enabled": 1
+    },
+    "stride": {
+      "baseline": true,
+      "policy": 1,
+      "enabled": 1
+    },
+    "victim_buffer": {
+      "baseline": false,
+      "region": 0,
+      "feedback": 0,
+      "victim": 1,
+      "enabled": 0
+    },
+    "global_buffer": {
+      "baseline": false,
+      "region": 0,
+      "feedback": 0,
+      "victim": 0,
+      "enabled": 1
+    },
+    "region_buffer": {
+      "baseline": false,
+      "region": 1,
+      "feedback": 0,
+      "victim": 0,
+      "enabled": 1
+    },
+    "context_feedback": {
+      "baseline": false,
+      "region": 1,
+      "feedback": 1,
+      "victim": 0,
+      "enabled": 1
+    }
+  },
+  "cases": 55,
+  "expected_primary_runs": 385,
+  "selection_candidates": [
+    "victim_buffer",
+    "global_buffer",
+    "region_buffer",
+    "context_feedback"
+  ],
+  "selection_traffic_budget": 1.25,
+  "selection_objective": "family-balanced geometric mean completion speedup; choose using validation only",
+  "thresholds_frozen": {
+    "REGION_ENTRIES": 4,
+    "REGION_LINE_BITS": 8,
+    "PROBE_INTERVAL": 16,
+    "quality_bits": 2,
+    "quality_initial": 2
+  },
+  "sensitivity": "validation only, intervals8and32; exploratory robustness only; never selects final thresholds",
+  "source_sha256_before_execution": {
+    "Phase2/level4/rtl/ai_cache_context.sv": "9b4ec96c34a7de184b8461132f84360af47b19ce23460f96a7a1d3f0a6417893",
+    "Phase2/level4/rtl/region_stride_prefetcher.sv": "20efd54cfa3b9337231cdd870913c5c444dfbcebc9645fb992c74cdb1f59e52d",
+    "Phase2/level4/tb/tb_trace_context.sv": "b9336866e438ce25839a5a3ef8b87718c75d77a26d3e9dbac13c2b84e57ef0dd",
+    "Phase2/level5/scripts/metrics.py": "55255c23181301c64564b845cb7c2d18612a15994660c566db44566c99e97f55",
+    "Phase2/level5/scripts/run_benchmarks.py": "89cecbdfab898a8e3b2e7eec0be38cfebc5f9b261465678c77a72b1416bb2785",
+    "Phase2/level5/bench/tb_trace_baseline.sv": "f20c0793ee6ace2a758cd1fe45bec36564ad9ca2bdc86612f24449d4e42aa0c3",
+    "Phase2/level1/fetch_corpus.py": "f775a59a1412d06e92c104fa990b922c48522e55427e96e80ceae6b799a53f1d",
+    "Phase2/level1/generate_suite.py": "2805e901f1c06391602f16d50c23a01822d30f3465c5b21203a202736c074b7d",
+    "Phase1/level4/rtl/ai_cache.sv": "7f507e6ab760a39bf9977d514656c1faedef48258954b6946312fc322802764c",
+    "Phase1/level4/rtl/next_line_prefetcher.sv": "7371ff5a38c5c22a8fd4374599959dda68412948a520c2696c7941858884645a",
+    "Phase1/level4/rtl/stride_prefetcher.sv": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe",
+    "Phase1/level4/tb/dram_model.sv": "0a5e5cd4b79496ce682b832949299ba85482c93dc2f28fe0f5f895b89f6ad0d0",
+    "Phase1/level5/scripts/generate_traces.py": "0939dc607b37b4605428c0a151dfa06526903aa37471de27d0d929c80beecb9d",
+    "Phase1/level5/scripts/trace_io.py": "f4bc9184f48e0035f533e1e12dfc7d83cf2b3833c4942eb166a7d46e09fa585b",
+    "Phase1/level1/generate_matmul_trace.py": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+    "Phase1/level5/results/reference/summary.csv": "2b5b123926b57eb17a9f18f2e748b0e9fcd1849c07c304b8b261f2645d13bffb"
+  },
+  "manifest_sha256": "9bf15a1cfa6d183956f47adf852ac314d974afa698e937a6e59478df7ff8eade"
+}

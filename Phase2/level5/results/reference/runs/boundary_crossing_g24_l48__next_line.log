@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/boundary_crossing_g24_l48.mem pf=1 policy=2 checked=128 completion=13394 quiescent=13444
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 134480000 (1ps)

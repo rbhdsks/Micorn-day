@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_tensor_stream.mem pf=1 policy=2 checked=512 completion=5410 quiescent=5412
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 54160000 (1ps)

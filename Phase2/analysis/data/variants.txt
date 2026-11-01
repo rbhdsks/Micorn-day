@@ -1,0 +1,7 @@
+none
+next_line
+stride
+victim_buffer
+global_buffer
+region_buffer
+context_feedback

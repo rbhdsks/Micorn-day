@@ -1,0 +1,4 @@
+`verilator_config
+// Read-only word-aligned interface: byte offset bits 1:0 cannot affect the word.
+// Alignment is checked by the independent testbench and the trace importer.
+lint_off -rule UNUSEDSIGNAL -file "*ai_cache_context.sv" -match "*cpu_req_addr*1:0*"

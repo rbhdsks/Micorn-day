@@ -1,0 +1,89 @@
+{
+  "tool": "Yosys 0.70 (git sha1 28ba3cb92, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)",
+  "command": "synth -top TOP; check -assert; stat -json",
+  "measurements": [
+    {
+      "variant": "stride",
+      "view": "functional",
+      "generic_cells": 33193,
+      "wire_bits": 34247,
+      "check_problems": 0
+    },
+    {
+      "variant": "stride",
+      "view": "instrumented",
+      "generic_cells": 33217,
+      "wire_bits": 34036,
+      "check_problems": 0
+    },
+    {
+      "variant": "global_buffer",
+      "view": "functional",
+      "generic_cells": 34542,
+      "wire_bits": 36206,
+      "check_problems": 0
+    },
+    {
+      "variant": "global_buffer",
+      "view": "instrumented",
+      "generic_cells": 34625,
+      "wire_bits": 36054,
+      "check_problems": 0
+    },
+    {
+      "variant": "region_buffer",
+      "view": "functional",
+      "generic_cells": 35348,
+      "wire_bits": 37358,
+      "check_problems": 0
+    },
+    {
+      "variant": "region_buffer",
+      "view": "instrumented",
+      "generic_cells": 35412,
+      "wire_bits": 37187,
+      "check_problems": 0
+    },
+    {
+      "variant": "context_feedback",
+      "view": "functional",
+      "generic_cells": 35434,
+      "wire_bits": 37447,
+      "check_problems": 0
+    },
+    {
+      "variant": "context_feedback",
+      "view": "instrumented",
+      "generic_cells": 35499,
+      "wire_bits": 37278,
+      "check_problems": 0
+    },
+    {
+      "variant": "victim_buffer",
+      "view": "functional",
+      "generic_cells": 34303,
+      "wire_bits": 36727,
+      "check_problems": 0
+    },
+    {
+      "variant": "victim_buffer",
+      "view": "instrumented",
+      "generic_cells": 32287,
+      "wire_bits": 34476,
+      "check_problems": 0
+    }
+  ],
+  "source_sha256": {
+    "Phase1/level4/rtl/ai_cache.sv": "7f507e6ab760a39bf9977d514656c1faedef48258954b6946312fc322802764c",
+    "Phase1/level4/rtl/next_line_prefetcher.sv": "7371ff5a38c5c22a8fd4374599959dda68412948a520c2696c7941858884645a",
+    "Phase1/level4/rtl/stride_prefetcher.sv": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe",
+    "Phase2/level4/rtl/ai_cache_context.sv": "9b4ec96c34a7de184b8461132f84360af47b19ce23460f96a7a1d3f0a6417893",
+    "Phase2/level4/rtl/region_stride_prefetcher.sv": "20efd54cfa3b9337231cdd870913c5c444dfbcebc9645fb992c74cdb1f59e52d",
+    "Phase2/level4/vivado/fpga_cache_top.sv": "05dbd3f4b721ae964cfacff530c757425de31152913795237ec33584fb053991"
+  },
+  "limits": [
+    "Generic mapped cells are tool-dependent, not FPGA LUTs or process area",
+    "Functional wrappers disconnect debug counters; instrumented view retains all counters",
+    "No target timing, placement, power or bitstream result"
+  ]
+}

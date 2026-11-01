@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/legacy_column_stride.mem pf=0 policy=1 checked=512 completion=21098 quiescent=21100
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 211040000 (1ps)

@@ -1,0 +1,255 @@
+{
+  "status": "pass",
+  "suite": "full",
+  "seed_count": 2,
+  "cases": [
+    {
+      "top": "tb_region_predictor",
+      "configuration": "directed",
+      "parameters": {},
+      "checked_responses": 0,
+      "elapsed_seconds": 0.103,
+      "pass_line": "PASS: region predictor 31 checked observations"
+    },
+    {
+      "top": "tb_context_directed",
+      "configuration": "directed",
+      "parameters": {},
+      "checked_responses": 23,
+      "elapsed_seconds": 0.119,
+      "pass_line": "PASS: context directed 23 checked demand responses, pollution/filter/replacement/gate/probe/disable/reset/late paths"
+    },
+    {
+      "top": "tb_victim_directed",
+      "configuration": "directed",
+      "parameters": {},
+      "checked_responses": 13,
+      "elapsed_seconds": 0.106,
+      "pass_line": "PASS: victim directed 13 checked responses, demand eviction/swap/capacity/offset/reset"
+    },
+    {
+      "top": "tb_context_nonpreemptible",
+      "configuration": "directed",
+      "parameters": {},
+      "checked_responses": 3,
+      "elapsed_seconds": 0.095,
+      "pass_line": "PASS: limitation demonstration: unrelated demand accepted but held for 20 cycles behind unaccepted prefetch 0x1030 in SEND."
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "global_buffer_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 1294811031
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 0.952,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 14842 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "global_buffer_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 1294811031
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 15.279,
+      "pass_line": "PASS: adversarial: 10000 responses, 299090 cycles, 8436 reads, hits=1650 misses=8350 PF=1057"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "global_buffer_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 2447445413
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 0.879,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 14754 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "global_buffer_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 2447445413
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 12.566,
+      "pass_line": "PASS: adversarial: 10000 responses, 298134 cycles, 8440 reads, hits=1662 misses=8338 PF=1074"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "region_buffer_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 1294811031
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 0.624,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 14860 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "region_buffer_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 1294811031
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 19.03,
+      "pass_line": "PASS: adversarial: 10000 responses, 298602 cycles, 8430 reads, hits=1658 misses=8342 PF=1024"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "region_buffer_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 2447445413
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 0.844,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 14851 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "region_buffer_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 0,
+        "SEED": 2447445413
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 14.434,
+      "pass_line": "PASS: adversarial: 10000 responses, 298134 cycles, 8443 reads, hits=1659 misses=8341 PF=1068"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "context_feedback_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 1,
+        "SEED": 1294811031
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 0.859,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 14860 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "context_feedback_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 1,
+        "SEED": 1294811031
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 24.009,
+      "pass_line": "PASS: adversarial: 10000 responses, 298602 cycles, 8430 reads, hits=1658 misses=8342 PF=1024"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "context_feedback_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 1,
+        "SEED": 2447445413
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 3.995,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 14851 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "context_feedback_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 1,
+        "FEEDBACK_ENABLE": 1,
+        "SEED": 2447445413
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 16.584,
+      "pass_line": "PASS: adversarial: 10000 responses, 298134 cycles, 8443 reads, hits=1659 misses=8341 PF=1068"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "victim_buffer_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "VICTIM_ENABLE": 1,
+        "SEED": 1294811031
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 1.702,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 15209 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "victim_buffer_4d2d3f97",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "VICTIM_ENABLE": 1,
+        "SEED": 1294811031
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 13.529,
+      "pass_line": "PASS: adversarial: 10000 responses, 263660 cycles, 6829 reads, hits=1659 misses=8341 PF=0"
+    },
+    {
+      "top": "tb_context_stress",
+      "configuration": "victim_buffer_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "VICTIM_ENABLE": 1,
+        "SEED": 2447445413
+      },
+      "checked_responses": 2000,
+      "elapsed_seconds": 1.025,
+      "pass_line": "PASS: continuous-request stress, 2000 ordered responses, 15221 cycles"
+    },
+    {
+      "top": "tb_context_adversarial",
+      "configuration": "victim_buffer_91e10da5",
+      "parameters": {
+        "REGION_ENABLE": 0,
+        "FEEDBACK_ENABLE": 0,
+        "VICTIM_ENABLE": 1,
+        "SEED": 2447445413
+      },
+      "checked_responses": 10000,
+      "elapsed_seconds": 14.469,
+      "pass_line": "PASS: adversarial: 10000 responses, 260886 cycles, 6834 reads, hits=1658 misses=8342 PF=0"
+    }
+  ],
+  "checked_responses": 96039,
+  "source_sha256": {
+    "Phase1/level4/rtl/stride_prefetcher.sv": "f73ab664eefadd02335f0ffdae14b87e0203b62f158fd6e0aac0c9a88bfdb0fe",
+    "Phase2/level4/rtl/ai_cache_context.sv": "9b4ec96c34a7de184b8461132f84360af47b19ce23460f96a7a1d3f0a6417893",
+    "Phase2/level4/rtl/region_stride_prefetcher.sv": "20efd54cfa3b9337231cdd870913c5c444dfbcebc9645fb992c74cdb1f59e52d",
+    "Phase1/level4/tb/dram_model.sv": "0a5e5cd4b79496ce682b832949299ba85482c93dc2f28fe0f5f895b89f6ad0d0",
+    "Phase2/level4/tb/context_protocol_monitor.sv": "8da2cb8099e1df461a40fa2556a6ce339594e5ea96a75c056076ee84e14f9f76",
+    "Phase2/level4/tb/tb_context_adversarial.sv": "d2d6e21996ee724e4beb97d0f33157b564a7d9f744d0c571553905efdb17c99b",
+    "Phase2/level4/tb/tb_context_directed.sv": "00e5d461d838835735a78ecc588a0d711d60a40749023eaf2a93f86b8cbe1ce4",
+    "Phase2/level4/tb/tb_context_nonpreemptible.sv": "0629144dabe994e4ca1d6610c29c8e07ca8c4d716efb3208755af2652054afa6",
+    "Phase2/level4/tb/tb_context_stress.sv": "556f284169503b3583dd88f90554145e7e2199f3a57933f5ee8d80e1e2d6c09a",
+    "Phase2/level4/tb/tb_region_predictor.sv": "af1e9be4818e81c5b1a894c620825de33a3d4c2306cb1f71c5aba80cbd76d7a0",
+    "Phase2/level4/tb/tb_trace_context.sv": "b9336866e438ce25839a5a3ef8b87718c75d77a26d3e9dbac13c2b84e57ef0dd",
+    "Phase2/level4/tb/tb_victim_directed.sv": "8908fd32fd1f8ab5dc4e7f3aff9dae1ab09dd6ab8048389b719ab3aee08d90fc"
+  },
+  "limits": [
+    "Bounded simulation, not formal proof or coverage closure",
+    "Counters are32bit and tests do not cover wraparound",
+    "Shared reset flushes both cache and memory; stale external responses unsupported"
+  ]
+}

@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/mixed_regions_g24_l0.mem pf=0 policy=1 checked=64 completion=2134 quiescent=2136
+Phase2/level4/tb/tb_trace_context.sv:135: $finish called at 21400000 (1ps)

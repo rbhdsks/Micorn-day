@@ -1,0 +1,15 @@
+{
+  "source": "build/benchmarks/summary.csv",
+  "source_sha256": "3e42485e1ca553c98419e4227436fef34a8aa4760321a4abd9a5c1974d79360a",
+  "matrix_rows": "cases.txt order",
+  "matrix_columns": "variants.txt order",
+  "meta_columns": [
+    "split1based",
+    "family1based",
+    "accesses",
+    "memory_latency",
+    "gap_cycles",
+    "seed_or_minus1"
+  ],
+  "evidence": "measured RTL values and explicitly labelled analytical transforms; no inferred energy, DRAM bandwidth or application execution speedup"
+}

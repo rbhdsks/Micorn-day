@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/gemm_tiled_s101_g0.mem pf=1 policy=2 checked=768 completion=3745 quiescent=3747
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 37510000 (1ps)

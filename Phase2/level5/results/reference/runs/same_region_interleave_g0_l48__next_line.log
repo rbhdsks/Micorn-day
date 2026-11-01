@@ -1,0 +1,2 @@
+PASS: trace Phase2/build/benchmarks/replay/same_region_interleave_g0_l48.mem pf=1 policy=2 checked=128 completion=8475 quiescent=8524
+Phase2/level5/bench/tb_trace_baseline.sv:134: $finish called at 85280000 (1ps)
