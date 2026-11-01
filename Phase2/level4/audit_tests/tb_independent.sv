@@ -127,7 +127,7 @@ module tb_independent;
   $display("COVER: IDLE=%0d SEND=%0d WAIT=%0d edges=%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d",visits[0],visits[1],visits[2],edges[0],edges[1],edges[2],edges[3],edges[4],edges[5],edges[6],edges[7],edges[8]);
   $finish;
  end
- integer telemetry=0;reg[1023:0]telemetry_path;
+ integer telemetry=0;string telemetry_path;
  initial begin
   if($value$plusargs("TELEMETRY=%s",telemetry_path))begin
    telemetry=$fopen(telemetry_path,"w");if(!telemetry)$fatal(1,"telemetry open failed");
