@@ -93,7 +93,7 @@ module tb_independent;
  reg sent_last=0;
  always @(negedge clk)begin
   random_state=step(random_state);
-  if(rst)begin cv=0;cr=0;mq=0;sent_last=0;end
+  if(rst)begin cv=0;cr=0;mq=0;end
   else begin
    cr=(random_state[2:0]!=0);mq=(!memory_busy&&!sv&&random_state[4:3]!=0);
    // Hold valid/address until the immediately preceding acceptance is observed.
@@ -119,10 +119,10 @@ module tb_independent;
   repeat(150)@(negedge clk);
   if(dut.state!=0 || dut.demand_pending || memory_busy || sv || rv)$fatal(1,"independent drain incomplete");
   resident=int'(dut.buffer_valid[0])+int'(dut.buffer_valid[1]);
-  if(!VICTIM_ENABLE && pi!=pu+late+pw+32'(resident))$fatal(1,"independent fate conservation");
-  if(VICTIM_ENABLE && (pi!=0||pu!=0||pw!=0||late!=0))$fatal(1,"victim issued speculation");
+  if((VICTIM_ENABLE == 0) && pi!=pu+late+pw+32'(resident))$fatal(1,"independent fate conservation");
+  if((VICTIM_ENABLE != 0) && (pi!=0||pu!=0||pw!=0||late!=0))$fatal(1,"victim issued speculation");
   if(accepted_total!=checked+canceled)$fatal(1,"reset epoch request conservation");
-  if(!visits[0]||!visits[1]||!visits[2]||!edges[1]||!edges[4]||!edges[5]||!edges[6]||!edges[8])$fatal(1,"FSM coverage missing");
+  if((visits[0] == 0)||(visits[1] == 0)||(visits[2] == 0)||(edges[1] == 0)||(edges[4] == 0)||(edges[5] == 0)||(edges[6] == 0)||(edges[8] == 0))$fatal(1,"FSM coverage missing");
   $display("PASS: independent requests=%0d checked=%0d canceled=%0d SENDreset=%0d WAITreset=%0d cycles=%0d",accepted_total,checked,canceled,resets_send,resets_wait,cycles);
   $display("COVER: IDLE=%0d SEND=%0d WAIT=%0d edges=%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d",visits[0],visits[1],visits[2],edges[0],edges[1],edges[2],edges[3],edges[4],edges[5],edges[6],edges[7],edges[8]);
   $finish;
@@ -130,7 +130,7 @@ module tb_independent;
  integer telemetry=0;string telemetry_path;
  initial begin
   if($value$plusargs("TELEMETRY=%s",telemetry_path))begin
-   telemetry=$fopen(telemetry_path,"w");if(!telemetry)$fatal(1,"telemetry open failed");
+   telemetry=$fopen(telemetry_path,"w");if(telemetry == 0)$fatal(1,"telemetry open failed");
    $fdisplay(telemetry,"cycle,state,cpu_valid,cpu_ready,rsp_valid,rsp_ready,mem_valid,mem_ready,mem_rsp_valid,mem_rsp_ready,reset,quality,prefetches,suppressed");
   end
  end
