@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/tensor_stream.mem pf=0 policy=1 checked=512 completion=7554 quiescent=7556
+level4/tb/tb_trace.sv:127: $finish called at 75600000 (1ps)

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "trace_contract": "aligned immutable 32-bit reads; hex 0x byte address and post-response gap",
+  "seed": 20261101,
+  "line_size_bytes": 16,
+  "traces": [
+    {
+      "name": "zero_gap_stream",
+      "file": "zero_gap_stream.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "b20bd69c09ddd33f9fd77f5d29c0024b953563ed726c3672c138f60b76e50b09",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "tensor_stream",
+      "file": "tensor_stream.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "969dc1fedeb5bf2a4ecdd8f7749e343032431cca1645a7c13d81f70a6e673a92",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "column_stride",
+      "file": "column_stride.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "efab6600ad5181c77542b961d9e6257e7c5cc1e2f28bef7decba94359490f692",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "tiled_reuse",
+      "file": "tiled_reuse.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "f65080041786f7d6cdd39c33601e35851576e81d287791b7774b0c34ca8da6df",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "embedding_gather",
+      "file": "embedding_gather.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "6549619cd492d26d0224067aaed395cb77791bd67bc5e089c49a68818e82cb82",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": 20261101
+    },
+    {
+      "name": "interleaved_conflicting",
+      "file": "interleaved_conflicting.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "36b3a1ba3b74d68ea74cecc384e68e19b3102c1ce62258faab49fc6edfed40ae",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "phase_shift",
+      "file": "phase_shift.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "dd582ec01fee5480dce9e0aaaf9511a692ada726d6185dd87defe418e7a96887",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "pollution_return",
+      "file": "pollution_return.csv",
+      "kind": "synthetic_pattern",
+      "rows": 320,
+      "sha256": "ceed5a3910875b52d8eb7a4d027608f04056edccb0976db0aa330b61b899b742",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "three_line_bursts",
+      "file": "three_line_bursts.csv",
+      "kind": "synthetic_pattern",
+      "rows": 192,
+      "sha256": "63355ac6c64c285c8531a968e2519fdda6717161fac99547c03522f4fbdcc2fd",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "two_stream_disjoint_sets",
+      "file": "two_stream_disjoint_sets.csv",
+      "kind": "synthetic_pattern",
+      "rows": 512,
+      "sha256": "cc306cc9a332c7cecc044f25689a80dbdc5ec3295878e8c0d4450c30646e9b1f",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "same_line",
+      "file": "same_line.csv",
+      "kind": "synthetic_pattern",
+      "rows": 16,
+      "sha256": "0332b849a7c26d4bcbc9d8834d2011f61a9b6ea8f27c2bdd71af088b4fa0e255",
+      "provenance": "locally generated deterministic access-pattern probe; not an application capture",
+      "seed": null
+    },
+    {
+      "name": "modelled_matmul_ijk_ab_reads",
+      "file": "modelled_matmul_ijk_ab_reads.csv",
+      "kind": "filtered_modelled_algorithm",
+      "rows": 512,
+      "sha256": "62bab677604bc0853d636753f622894e9e1c7b262c0194e6fc6551de4cd936ae",
+      "provenance": "Nitesh Level 1 scalar matmul generator; logical A/B compute reads only; not captured machine accesses",
+      "source_generator": "level1/generate_matmul_trace.py",
+      "source_generator_sha256": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+      "source_file": "modelled_sources/ijk/trace.csv",
+      "source_sha256": "6d6f571fda062c255ef0f6e71ddcc87bf6ffc1c44c913e098cb7def543df90f8",
+      "config": {
+        "m": 4,
+        "k": 8,
+        "n": 8,
+        "element_size": 4,
+        "alignment": 4096
+      },
+      "loop_order": "ijk",
+      "excluded_rows": 544,
+      "filter": "phase=compute AND operation=R AND operand in {A,B}; exclude C, writes and initialisation",
+      "gap_cycles": 6,
+      "gap_source": "explicit replay assumption, not measured compute timing",
+      "numerical_generator_reference_passed": true,
+      "rtl_memory_contents": "address-derived deterministic word pattern, not matrix numeric values"
+    },
+    {
+      "name": "modelled_matmul_ikj_ab_reads",
+      "file": "modelled_matmul_ikj_ab_reads.csv",
+      "kind": "filtered_modelled_algorithm",
+      "rows": 512,
+      "sha256": "63540bee3bb1007d4372641efbf1159f28bc0aa9b7115f0c4b9b2656dee20650",
+      "provenance": "Nitesh Level 1 scalar matmul generator; logical A/B compute reads only; not captured machine accesses",
+      "source_generator": "level1/generate_matmul_trace.py",
+      "source_generator_sha256": "c8bd9ce03cafde22834379c8b8852ef443778b8a5cfce8919191b8c415dd23cf",
+      "source_file": "modelled_sources/ikj/trace.csv",
+      "source_sha256": "5e413732f9cb8ec519c47366f45971347e68252cb5f6bef08c00b219f73b6001",
+      "config": {
+        "m": 4,
+        "k": 8,
+        "n": 8,
+        "element_size": 4,
+        "alignment": 4096
+      },
+      "loop_order": "ikj",
+      "excluded_rows": 544,
+      "filter": "phase=compute AND operation=R AND operand in {A,B}; exclude C, writes and initialisation",
+      "gap_cycles": 6,
+      "gap_source": "explicit replay assumption, not measured compute timing",
+      "numerical_generator_reference_passed": true,
+      "rtl_memory_contents": "address-derived deterministic word pattern, not matrix numeric values"
+    }
+  ]
+}

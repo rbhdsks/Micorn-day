@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/modelled_matmul_ijk_ab_reads.mem pf=1 policy=2 checked=512 completion=7154 quiescent=7156
+level4/tb/tb_trace.sv:127: $finish called at 71600000 (1ps)

@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/zero_gap_stream.mem pf=1 policy=1 checked=512 completion=9289 quiescent=9302
+level4/tb/tb_trace.sv:127: $finish called at 93060000 (1ps)

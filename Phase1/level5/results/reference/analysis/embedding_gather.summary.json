@@ -1,0 +1,215 @@
+{
+  "accesses": 512,
+  "line_size_bytes": 16,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 457,
+  "touched_line_footprint_bytes": 7312,
+  "minimum_byte_address": 262208,
+  "maximum_byte_address": 294784,
+  "adjacent_same_line_accesses": 0,
+  "adjacent_same_line_fraction": 0.0,
+  "accesses_to_previously_seen_line": 55,
+  "mean_reuse_gap_accesses": 130.36363636363637,
+  "top_line_access_counts": [
+    {
+      "line_number": 17733,
+      "count": 3
+    },
+    {
+      "line_number": 16897,
+      "count": 3
+    },
+    {
+      "line_number": 16534,
+      "count": 3
+    },
+    {
+      "line_number": 17417,
+      "count": 3
+    },
+    {
+      "line_number": 16526,
+      "count": 3
+    },
+    {
+      "line_number": 17655,
+      "count": 3
+    },
+    {
+      "line_number": 16457,
+      "count": 3
+    },
+    {
+      "line_number": 16756,
+      "count": 2
+    },
+    {
+      "line_number": 16590,
+      "count": 2
+    },
+    {
+      "line_number": 17133,
+      "count": 2
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": -67,
+      "count": 3
+    },
+    {
+      "delta_lines": -211,
+      "count": 3
+    },
+    {
+      "delta_lines": 691,
+      "count": 2
+    },
+    {
+      "delta_lines": 224,
+      "count": 2
+    },
+    {
+      "delta_lines": 186,
+      "count": 2
+    },
+    {
+      "delta_lines": -1166,
+      "count": 2
+    },
+    {
+      "delta_lines": -208,
+      "count": 2
+    },
+    {
+      "delta_lines": 20,
+      "count": 2
+    },
+    {
+      "delta_lines": 181,
+      "count": 2
+    },
+    {
+      "delta_lines": -306,
+      "count": 2
+    }
+  ],
+  "top_nonzero_line_deltas": [
+    {
+      "delta_lines": -67,
+      "count": 3
+    },
+    {
+      "delta_lines": -211,
+      "count": 3
+    },
+    {
+      "delta_lines": 691,
+      "count": 2
+    },
+    {
+      "delta_lines": 224,
+      "count": 2
+    },
+    {
+      "delta_lines": 186,
+      "count": 2
+    },
+    {
+      "delta_lines": -1166,
+      "count": 2
+    },
+    {
+      "delta_lines": -208,
+      "count": 2
+    },
+    {
+      "delta_lines": 20,
+      "count": 2
+    },
+    {
+      "delta_lines": 181,
+      "count": 2
+    },
+    {
+      "delta_lines": -306,
+      "count": 2
+    }
+  ],
+  "top_reuse_gaps": [
+    {
+      "gap_accesses": 27,
+      "count": 2
+    },
+    {
+      "gap_accesses": 114,
+      "count": 2
+    },
+    {
+      "gap_accesses": 4,
+      "count": 2
+    },
+    {
+      "gap_accesses": 13,
+      "count": 1
+    },
+    {
+      "gap_accesses": 45,
+      "count": 1
+    },
+    {
+      "gap_accesses": 79,
+      "count": 1
+    },
+    {
+      "gap_accesses": 5,
+      "count": 1
+    },
+    {
+      "gap_accesses": 90,
+      "count": 1
+    },
+    {
+      "gap_accesses": 59,
+      "count": 1
+    },
+    {
+      "gap_accesses": 14,
+      "count": 1
+    }
+  ],
+  "top_regions": [
+    {
+      "region_number": 66,
+      "count": 85
+    },
+    {
+      "region_number": 71,
+      "count": 71
+    },
+    {
+      "region_number": 70,
+      "count": 70
+    },
+    {
+      "region_number": 64,
+      "count": 65
+    },
+    {
+      "region_number": 69,
+      "count": 62
+    },
+    {
+      "region_number": 68,
+      "count": 58
+    },
+    {
+      "region_number": 65,
+      "count": 52
+    },
+    {
+      "region_number": 67,
+      "count": 49
+    }
+  ]
+}

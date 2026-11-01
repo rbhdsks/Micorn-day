@@ -1,0 +1,167 @@
+{
+  "accesses": 512,
+  "line_size_bytes": 16,
+  "region_size_bytes": 4096,
+  "unique_cache_lines": 24,
+  "touched_line_footprint_bytes": 384,
+  "minimum_byte_address": 4096,
+  "maximum_byte_address": 8444,
+  "adjacent_same_line_accesses": 0,
+  "adjacent_same_line_fraction": 0.0,
+  "accesses_to_previously_seen_line": 488,
+  "mean_reuse_gap_accesses": 16.098360655737704,
+  "top_line_access_counts": [
+    {
+      "line_number": 256,
+      "count": 32
+    },
+    {
+      "line_number": 257,
+      "count": 32
+    },
+    {
+      "line_number": 258,
+      "count": 32
+    },
+    {
+      "line_number": 259,
+      "count": 32
+    },
+    {
+      "line_number": 260,
+      "count": 32
+    },
+    {
+      "line_number": 261,
+      "count": 32
+    },
+    {
+      "line_number": 262,
+      "count": 32
+    },
+    {
+      "line_number": 263,
+      "count": 32
+    },
+    {
+      "line_number": 512,
+      "count": 16
+    },
+    {
+      "line_number": 514,
+      "count": 16
+    }
+  ],
+  "top_line_deltas": [
+    {
+      "delta_lines": -261,
+      "count": 20
+    },
+    {
+      "delta_lines": 263,
+      "count": 20
+    },
+    {
+      "delta_lines": 257,
+      "count": 20
+    },
+    {
+      "delta_lines": -257,
+      "count": 20
+    },
+    {
+      "delta_lines": 259,
+      "count": 20
+    },
+    {
+      "delta_lines": -259,
+      "count": 20
+    },
+    {
+      "delta_lines": 261,
+      "count": 20
+    },
+    {
+      "delta_lines": 256,
+      "count": 16
+    },
+    {
+      "delta_lines": -256,
+      "count": 16
+    },
+    {
+      "delta_lines": 258,
+      "count": 16
+    }
+  ],
+  "top_nonzero_line_deltas": [
+    {
+      "delta_lines": -261,
+      "count": 20
+    },
+    {
+      "delta_lines": 263,
+      "count": 20
+    },
+    {
+      "delta_lines": 257,
+      "count": 20
+    },
+    {
+      "delta_lines": -257,
+      "count": 20
+    },
+    {
+      "delta_lines": 259,
+      "count": 20
+    },
+    {
+      "delta_lines": -259,
+      "count": 20
+    },
+    {
+      "delta_lines": 261,
+      "count": 20
+    },
+    {
+      "delta_lines": 256,
+      "count": 16
+    },
+    {
+      "delta_lines": -256,
+      "count": 16
+    },
+    {
+      "delta_lines": 258,
+      "count": 16
+    }
+  ],
+  "top_reuse_gaps": [
+    {
+      "gap_accesses": 2,
+      "count": 192
+    },
+    {
+      "gap_accesses": 16,
+      "count": 192
+    },
+    {
+      "gap_accesses": 10,
+      "count": 56
+    },
+    {
+      "gap_accesses": 80,
+      "count": 48
+    }
+  ],
+  "top_regions": [
+    {
+      "region_number": 1,
+      "count": 256
+    },
+    {
+      "region_number": 2,
+      "count": 256
+    }
+  ]
+}

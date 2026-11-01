@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/pollution_return.mem pf=0 policy=1 checked=320 completion=7888 quiescent=7890
+level4/tb/tb_trace.sv:127: $finish called at 78940000 (1ps)

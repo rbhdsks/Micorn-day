@@ -1,0 +1,2 @@
+prefetch,prefetch_policy,index_bits,memory_latency,accesses,hits,misses,prefetch_issued,timely_useful,late_useful,unused_evicted,resident_unconsumed,dram_reads,cycles,completion_cycles,quiescent_cycles,latency_sum,max_latency,offer_latency_sum,max_offer_latency,request_wait_cycles,total_compute_gap_cycles
+1,2,6,12,512,18,494,484,8,0,445,31,978,16849,16849,16864,13008,33,13013,33,5,2044

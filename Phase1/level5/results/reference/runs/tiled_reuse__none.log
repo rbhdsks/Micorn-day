@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/tiled_reuse.mem pf=0 policy=1 checked=512 completion=6463 quiescent=6465
+level4/tb/tb_trace.sv:127: $finish called at 64690000 (1ps)

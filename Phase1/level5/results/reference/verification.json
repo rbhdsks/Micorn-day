@@ -1,0 +1,62 @@
+[
+  {
+    "bench": "tb_cache",
+    "command": [
+      "vvp",
+      "build/verification/tb_cache.vvp"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "log": "build/verification/tb_cache.log"
+  },
+  {
+    "bench": "tb_stress",
+    "command": [
+      "vvp",
+      "build/verification/tb_stress.vvp"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "log": "build/verification/tb_stress.log"
+  },
+  {
+    "bench": "tb_predictor",
+    "command": [
+      "vvp",
+      "build/verification/tb_predictor.vvp"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "log": "build/verification/tb_predictor.log"
+  },
+  {
+    "bench": "tb_next_line",
+    "command": [
+      "vvp",
+      "build/verification/tb_next_line.vvp"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "log": "build/verification/tb_next_line.log"
+  },
+  {
+    "bench": "tb_adversarial",
+    "command": [
+      "vvp",
+      "build/verification/tb_adversarial.vvp"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "log": "build/verification/tb_adversarial.log"
+  },
+  {
+    "bench": "tb_nonpreemptible",
+    "command": [
+      "vvp",
+      "build/verification/tb_nonpreemptible.vvp"
+    ],
+    "exit_code": 0,
+    "pass": true,
+    "log": "build/verification/tb_nonpreemptible.log"
+  }
+]

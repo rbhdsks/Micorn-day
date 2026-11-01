@@ -1,0 +1,2 @@
+PASS: trace build/benchmarks/replay/column_stride.mem pf=1 policy=1 checked=512 completion=12573 quiescent=12587
+level4/tb/tb_trace.sv:127: $finish called at 125910000 (1ps)
