@@ -13,7 +13,7 @@
 | adjacent_same_line_fraction | 0.125 |
 | accesses_to_previously_seen_line | 5 |
 | mean_reuse_gap_accesses | 3.4 |
-| source_path | /Users/zsres/Desktop/micorn-day/level1/examples/synthetic_sequential.txt |
+| source_path | level1/examples/synthetic_sequential.txt |
 | trace_format | text |
 
 ## Most accessed lines

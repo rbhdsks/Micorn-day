@@ -68,6 +68,6 @@
       "count": 9
     }
   ],
-  "source_path": "/Users/zsres/Desktop/micorn-day/level1/examples/synthetic_sequential.txt",
+  "source_path": "level1/examples/synthetic_sequential.txt",
   "trace_format": "text"
 }

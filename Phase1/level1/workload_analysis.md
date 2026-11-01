@@ -21,3 +21,12 @@ Pending evidence: compare sequential, fixed-stride, and irregular regions; choos
 ## Available preliminary experiment
 
 A modelled matrix-multiplication experiment is now available in `matmul_analysis.ipynb`, with measured conclusions in `results/modelled_matmul/analysis.md`. This is a separate, clearly labelled starting example; it does not replace the pending official/captured workload analysis above.
+
+## Phase 1 hardware bridge
+
+The original modelled experiment remains archived at a 64-byte analysis line
+size. Phase 1 uses a 16-byte line and a read-only RTL contract. Level 5 therefore
+re-analyses and replays only compute-phase A/B reads, with provenance and explicit
+spacing assumptions. Mutable C and initialisation writes are excluded. Results
+from that subset must not be described as end-to-end matrix-multiplication or AI
+application acceleration.
